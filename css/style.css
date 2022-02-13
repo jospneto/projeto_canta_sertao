@@ -1,35 +1,132 @@
 *{
-    margin: 0 auto;
-    padding: 0;
     box-sizing: border-box;
 }
 
-.nav-search ul{
-    list-style: none;
-    float: right;
+body{
+    margin: 0px;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 120px, 1fr, 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "menu" "conteudo" "rodape";
 }
 
-.nav-search li{
+bodY{
+    background-image: url(../img/bgImage.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu{
+    grid-area: "menu";
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: coral;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+}
+
+.login{
+    background-color: tomato;
+    padding: 5px 10px;
+    display: flex;
+    border-radius: 8px;
+}
+
+.login:hover{
+    border-top-color: #FBAD01;
+    background: #FBAD01;
+    color: tomato;
+}
+
+.login:active{
+border-top-color: tomato;
+background: tomato;
+}
+
+.cadastro{
+    background-color: #FBAD01;
+    padding: 5px 10px;
+    display: flex;
+    border-radius: 8px;
+}
+
+.cadastro:hover{
+    border-top-color: tomato;
+    background: tomato;
+    color: #FBAD01;
+}
+
+.cadastro:active{
+border-top-color: #FBAD01;
+background: #FBAD01;
+}
+
+.menu li{
     display: inline;
 }
 
-.nav-search li, a{
-    color: tomato;
-    padding: 20px;
-    display: inline-block;
+.menu li a{
+    padding: 10px;
     text-decoration: none;
+    display: inline-block;
 }
 
-.nav-search li, a:hover{
-    color: coral;
+.conteudo{
+    grid-area: "conteudo";
+    height: calc(100vh - 180px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
 }
 
-.nav-search img{
-    padding: 0;
+.conteudo h2{
+    padding: 20px;
+    text-align: center;
 }
 
-.nav-search p{
-    font-family: 'Montserrat', sans-serif;
+.conteudo li{
+    display: inline;
+    padding: 20px;
+}
+
+.conteudo li a{
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.rodape{
+    grid-area: "rodape";
+    background-color: tomato;
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    font-size: 0.8rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.rodape h2{
+    padding: 10px;
+}
+
+.rodape li{
+    display: inline;
+}
+
+.rodape li a{
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
 }
