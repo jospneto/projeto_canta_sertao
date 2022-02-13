@@ -11,9 +11,9 @@
   <nav class="menu">
     <img src="img/Logo.png">
     <ul>
-      <li><a href=""></a>Contatos</li>
-      <li class="login"><a href=""></a>Login</li>
-      <li class="cadastro"><a href=""></a>Cadastro</li>
+      <li><a href="">Contatos</a></li>
+      <li class="login"><a href="/login/index.php">Login</a></li></a>
+      <li class="cadastro"><a href="">Cadastro</a></li>
     </ul>
   </nav>
   <div class="conteudo">
