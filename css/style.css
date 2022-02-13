@@ -10,6 +10,7 @@ body{
     grid-template-rows: 120px, 1fr, 60px;
     grid-template-columns: 1fr;
     grid-template-areas: "menu" "conteudo" "rodape";
+    overflow: hidden;
 }
 
 bodY{
@@ -29,7 +30,7 @@ bodY{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     color: coral;
-    text-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 1px 2.5px;
 }
 
 .login{
@@ -46,8 +47,8 @@ bodY{
 }
 
 .login:active{
-border-top-color: tomato;
-background: tomato;
+    border-top-color: tomato;
+    background: tomato;
 }
 
 .cadastro{
@@ -64,8 +65,8 @@ background: tomato;
 }
 
 .cadastro:active{
-border-top-color: #FBAD01;
-background: #FBAD01;
+    border-top-color: #FBAD01;
+    background: #FBAD01;
 }
 
 .menu li{
@@ -73,7 +74,7 @@ background: #FBAD01;
 }
 
 .menu li a{
-    padding: 10px;
+    padding: 5px;
     text-decoration: none;
     display: inline-block;
 }
@@ -82,14 +83,19 @@ background: #FBAD01;
     grid-area: "conteudo";
     height: calc(100vh - 180px);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     align-items: center;
+    color: #E5E5E5;
+    font-size: 1.2rem;
 }
 
 .conteudo h2{
     padding: 20px;
     text-align: center;
+    color: #E5E5E5;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .conteudo li{
@@ -107,26 +113,25 @@ background: #FBAD01;
     grid-area: "rodape";
     background-color: tomato;
     position: sticky;
+    height: 80px;
     bottom: 0px;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     align-items: center;
     list-style: none;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-family: 'Lato', sans-serif;
 }
 
-.rodape h2{
-    padding: 10px;
-}
-
-.rodape li{
+.rodape ul li{
     display: inline;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
 }
 
-.rodape li a{
-    padding: 10px;
+.rodape ul li a{
+    padding: 0px;
     text-decoration: none;
-    display: inline-block;
 }
