@@ -1,0 +1,35 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-search ul{
+    list-style: none;
+    float: right;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-search li{
+    display: inline;
+}
+
+.nav-search li, a{
+    color: tomato;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav-search li, a:hover{
+    color: coral;
+}
+
+.nav-search img{
+    padding: 0;
+}
+
+.nav-search p{
+    font-family: 'Montserrat', sans-serif;
+}
