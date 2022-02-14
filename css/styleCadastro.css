@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 120px, 1fr, 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "menu" "conteudo" "rodape";
+    overflow: hidden;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #CC2015, #CD851A);
+}
+
+.menu{
+    grid-area: "menu";
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.conteudo{
+    grid-area: "conteudo";
+    height: calc(100vh - 180px);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.conteudo h2{
+    padding: 20px;
+    text-align: center;
+    color: black;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.conteudo li {
+    display: inline;
+}
+
+.conteudo li{
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.conteudo img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.conteudo p{
+    display: inline;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-align: center;
+    color: black;
+    font-size: 1.2rem;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.conteudo a p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape a:link{
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.rodape{
+    grid-area: "rodape";
+    background-color: tomato;
+    position: sticky;
+    height: 60px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    font-size: 0.7rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.rodape ul li{
+    display: inline;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rodape ul li a{
+    padding: 0px;
+    text-decoration: none;
+}
