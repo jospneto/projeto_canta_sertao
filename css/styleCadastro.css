@@ -81,6 +81,10 @@ body{
     align-items: center;
 }
 
+.conteudo a{
+    text-decoration: none;
+}
+
 .rodape a:link{
     text-decoration: none;
     overflow: hidden;
