@@ -34,6 +34,10 @@ bodY{
     text-shadow: rgba(0, 0, 0, 0.5) 0 1px 2.5px;
 }
 
+.menu a:visited{
+    color: coral;
+}
+
 .login{
     background-color: tomato;
     padding: 5px 10px;
@@ -52,6 +56,10 @@ bodY{
     background: tomato;
 }
 
+.login a:visited{
+    color: coral;
+}
+
 .cadastro{
     background-color: #FBAD01;
     padding: 5px 10px;
@@ -68,6 +76,10 @@ bodY{
 .cadastro:active{
     border-top-color: #FBAD01;
     background: #FBAD01;
+}
+
+.cadastro a:visited{
+    color:coral;
 }
 
 .menu li{
