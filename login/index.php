@@ -9,11 +9,11 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         echo "Preencha sua senha";
     } else {
 
-        $email = $mysqli->real_escape_string($_POST['email']);
-        $senha = $mysqli->real_escape_string($_POST['senha']);
+        $email = $conexao->real_escape_string($_POST['email']);
+        $senha = $conexao->real_escape_string($_POST['senha']);
 
         $sql_code = "SELECT * FROM user_musico WHERE email = '$email' AND senha = '$senha'";
-        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
+        $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
 
         $quantidade = $sql_query->num_rows;
 
@@ -52,11 +52,11 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         <h1 class="titulo">Acesse sua conta</h1>
         <form action="" method="POST" class="form">
             <p>
-                <label>E-mail</label>
-                <input type="text" name="email" placeholder="Nome de usuário">
+                <label>E-mail: </label>
+                <input type="text" name="email" placeholder="@gmail.com">
             </p>
             <p>
-                <label>Senha</label>
+                <label>Senha: </label>
                 <input type="password" name="senha" placeholder="Senha">
             </p>
             <p>

@@ -5,8 +5,8 @@ $senha = 'neto0412';
 $database = 'cantasertao';
 $host = 'localhost:3306';
 
-$mysqli = new mysqli($host, $usuario, $senha, $database);
+$conexao = new mysqli($host, $usuario, $senha, $database);
 
-if($mysqli->error) {
-    die("Falha ao conectar ao banco de dados: " . $mysqli->error);
+if($conexao->error) {
+    die("Falha ao conectar ao banco de dados: " . $conexao->error);
 }

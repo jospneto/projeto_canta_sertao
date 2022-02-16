@@ -15,7 +15,7 @@
       <h2>Primeiro nos diga quem você é:</h2>
       <ul>
         <li><img src="/img/music 1.png" alt=""></li>
-        <a href=""><p>Músico</p></a>
+        <a href="/login/cadastro.php"><p>Músico</p></a>
         <li><img src="/img/businessman 1.png" alt=""></li>
         <a href=""><p>Contratante</p></a>
       </ul>
