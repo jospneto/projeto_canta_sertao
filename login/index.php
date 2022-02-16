@@ -12,7 +12,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         $email = $mysqli->real_escape_string($_POST['email']);
         $senha = $mysqli->real_escape_string($_POST['senha']);
 
-        $sql_code = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+        $sql_code = "SELECT * FROM user_musico WHERE email = '$email' AND senha = '$senha'";
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
 
         $quantidade = $sql_query->num_rows;
@@ -25,8 +25,8 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
                 session_start();
             }
 
-            $_SESSION['id'] = $usuario['id'];
-            $_SESSION['nome'] = $usuario['nome'];
+            $_SESSION['cpf_cnpj'] = $usuario['cpf_cnpj'];
+            $_SESSION['nome_fantasia'] = $usuario['nome_fantasia'];
 
             header("Location: painel.php");
 
