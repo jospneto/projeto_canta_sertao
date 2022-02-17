@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 120px 1fr 60px;
+    grid-column: 1fr;
+    grid-template-areas: "menu" "perfil" "conteudo";
+}
+
+body{
+    background-image: linear-gradient(to bottom, #CC2015, #CD851A);
+    background-repeat: no-repeat;
+}
+
+.menu{
+    grid-area: "menu";
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.perfil{
+    grid-area: "perfil";
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.perfil li{
+    display: inline;
+}
+
+.perfil img{
+    border-radius: 50%;
+}
