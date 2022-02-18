@@ -12,7 +12,7 @@
     <img src="img/Logo.png">
     <ul>
       <li><a href="">Contatos</a></li>
-      <li class="login"><a href="/login/index.php">Login</a></li></a>
+      <li class="login"><a href="loginAcess.php">Login</a></li></a>
       <li class="cadastro"><a href="cadastro.php">Cadastro</a></li>
     </ul>
   </nav>

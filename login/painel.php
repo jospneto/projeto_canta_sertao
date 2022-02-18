@@ -10,9 +10,11 @@
 
         $diretorio = "imagens_bd/";
 
+        $data = date("Y/m/d");
+
         move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio . $novo_nome);
 
-        $sql_code = "INSERT INTO imagens_musico (idImagem, iMg) values (' ', '$novo_nome', NOW())";
+        $sql_code = "INSERT INTO imagens_musico (idImagem, iMg) values (' ', '$novo_nome', '$data'))";
 
         if(mysqli_query($conexao, $sql_code)){
             $msg = "Arquivo enviado com sucesso!";
