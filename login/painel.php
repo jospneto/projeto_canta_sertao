@@ -14,7 +14,7 @@
 
         move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio . $novo_nome);
 
-        $sql_code = "INSERT INTO imagens_musico (idImagem, iMg) values (' ', '$novo_nome', '$data'))";
+        $sql_code = "INSERT INTO imagens_musico (iMg, data_entrada) values ('$novo_nome', '$data')";
 
         if(mysqli_query($conexao, $sql_code)){
             $msg = "Arquivo enviado com sucesso!";
