@@ -38,31 +38,41 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
 }
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styleLogin.css?v=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/img/Logo.png">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Login</title>
-</head>
-<body>
-    <div class="box">
-        <h1 class="titulo">Acesse sua conta</h1>
-        <form action="" method="POST" class="form">
-            <p>
-                <label>E-mail: </label>
-                <input type="text" name="email" placeholder="@gmail.com">
-            </p>
-            <p>
-                <label>Senha: </label>
-                <input type="password" name="senha" placeholder="Senha">
-            </p>
-            <p>
-                <button type="submit">Entrar</button>
-            </p>
-        </form>
-    </div>
-</body>
+
+    <!-- Principal CSS do Bootstrap -->
+    <link href="\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos customizados para esse template -->
+    <link href="/css/signin.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" method="POST" action="">
+      <img class="mb-4" src="/img/Logo.png" alt="">
+      <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
+      <label for="inputEmail" class="sr-only">Endereço de email</label>
+      <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
+      <label for="inputPassword" class="sr-only">Senha</label>
+      <input type="password" name="senha" id="inputPassword" class="form-control" placeholder="Senha" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me">Lembrar de mim
+        </label>
+      </div>
+      <button class="btn btn-lg btn-danger btn-block" type="submit">Login</button>
+    </form>
+    <?php
+        include("rodape.php");
+    ?>
+  </body>
 </html>
