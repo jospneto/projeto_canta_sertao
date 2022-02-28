@@ -28,7 +28,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             $_SESSION['cpf_cnpj'] = $usuario['cpf_cnpj'];
             $_SESSION['nome'] = $usuario['nome'];
 
-            header("Location: painel.php");
+            header("Location: painelContra.php");
 
         } else {
             echo "Falha ao logar! E-mail ou senha incorretos";

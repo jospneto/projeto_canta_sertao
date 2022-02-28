@@ -9,7 +9,7 @@
     $data_entrada = NOW();
     $genero_musical = $_POST['genero_musical'];
     $cache_show = $_POST['cache_show'];
-    $senha = $_POST['senha'];
+    $senha = md5($_POST['senha']);
 
     $sql_code = "INSERT INTO user_musico values ('$cpf_cnpj', '$nome_fantasia', 
     '$email', '$endereco', '$telefone', '$genero_musical', '$data_entrada', '$cache_show', '$senha')";

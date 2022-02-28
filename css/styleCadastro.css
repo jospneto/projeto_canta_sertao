@@ -46,21 +46,12 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-.conteudo li {
-    display: inline;
-}
-
-.conteudo li{
-    padding: 10px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.conteudo img{
+.conteudo ul li{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
     padding: 10px;
+    text-decoration: none;
 }
 
 .conteudo p{

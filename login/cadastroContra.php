@@ -8,7 +8,7 @@
     $endereco = $_POST['endereco'];
     $telefone = $_POST['telefone'];
     $data_entrada = NOW();
-    $senha = $_POST['senha'];
+    $senha = md5($_POST['senha']);
 
     $sql_code = "INSERT INTO user_contratante values ('$cpf_cnpj', '$nome', '$nome_empresa', 
     '$email', '$endereco', '$telefone', '$data_entrada', '$senha')";

@@ -49,7 +49,7 @@
 	    </form>
     </div>
     <div class="perfil">
-        <h2><?php echo $_SESSION['nome_fantasia']; ?></h2>
+        <h2><?php echo $_SESSION['nome']; ?></h2>
         <ul class="midias">
         <li><a href=""><img src="/img/WhatsApp.png" alt=""></a></li>
         <li><a href=""><img src="/img/msg.png" alt=""></a></li>
@@ -57,6 +57,20 @@
         <li><a href=""><img src="/img/Facebook (1).png" alt=""></a></li>
         </ul>
     </div>
+    <div class="mural">
+        <?php
+            include('conexao.php');
+            $sql = "SELECT * FROM user_contrante WHERE cpf_cnpj";
+            $buscar = mysqli_query($conexao, $sql);
+            $dados = mysqli_fetch_array($buscar);
+            $bio = $POST['bio'];
+            $sql_code = "INSERT INTO bio_contratante (cpf_cnpj, bio) values ('$dados', '$bio')";
+        ?>
+        <form action="" method="POST">
+            <input type="text" name="bio">
+            <input type="submit" name="enviar">
+        </form>
+    </div>   
     <p>
         <a href="logout.php">Sair</a>
     </p>
