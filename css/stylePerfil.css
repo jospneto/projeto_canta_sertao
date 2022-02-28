@@ -7,9 +7,9 @@ body{
     padding: 0;
     display: grid;
     height: 100vh;
-    grid-template-rows: 120px 1fr 60px;
+    grid-template-rows: 140px 1fr 80px;
     grid-column: 1fr;
-    grid-template-areas: "menu" "perfil" "conteudo";
+    grid-template-areas: "menu" "perfil" "mural";
 }
 
 body{
@@ -30,6 +30,7 @@ body{
     grid-area: "perfil";
     display: flex;
     padding: 20px;
+    justify-content: left;
     align-items: center;
 }
 
@@ -39,4 +40,46 @@ body{
 
 .perfil img{
     border-radius: 50%;
+}
+
+.mural{
+    grid-area: "mural";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.mural .bio{
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: #CC3D16;
+}
+
+.rodape{
+    grid-area: "rodape";
+    background-color: tomato;
+    position: sticky;
+    height: 80px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    font-size: 0.7rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.rodape ul li{
+    display: inline;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rodape ul li a{
+    padding: 0px;
+    text-decoration: none;
 }
