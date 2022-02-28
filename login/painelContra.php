@@ -36,7 +36,8 @@
     <nav class="menu">
         <img src="/img/Logo.png">
     </nav>
-    <div class="imagem">
+    </div>
+    <div class="perfil">
         <?php
             if(isset($msg) && $msg != false){
                 echo "<p>$msg</p>";
@@ -47,8 +48,6 @@
             <br/>
             <input type="submit" value="Enviar"/>
 	    </form>
-    </div>
-    <div class="perfil">
         <h2><?php echo $_SESSION['nome']; ?></h2>
         <ul class="midias">
         <li><a href=""><img src="/img/WhatsApp.png" alt=""></a></li>
@@ -56,6 +55,9 @@
         <li><a href=""><img src="/img/Instagram (2).png" alt=""></a></li>
         <li><a href=""><img src="/img/Facebook (1).png" alt=""></a></li>
         </ul>
+        <p>
+            <a href="logout.php"><button>Sair</button></a>
+        </p>
     </div>
     <div class="mural">
         <?php
@@ -66,14 +68,12 @@
             $bio = $POST['bio'];
             $sql_code = "INSERT INTO bio_contratante (cpf_cnpj, bio) values ('$dados', '$bio')";
         ?>
+        <p>Quem somos ?</p>
         <form action="" method="POST">
             <input type="text" name="bio" class="bio">
-            <input type="submit" name="enviar">
+            <input type="submit" name="enviar" class="butEnviar">
         </form>
     </div>   
-    <p>
-        <a href="logout.php">Sair</a>
-    </p>
     <?phpinclude("rodape.php");?>
 </body>
 </html>
