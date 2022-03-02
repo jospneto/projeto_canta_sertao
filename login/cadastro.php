@@ -7,7 +7,7 @@
         }else if(strlen($_POST['nome_fantasia']) == 0){
             echo "Preencha seu nome fantasia";
         }else if(strlen($_POST['email'] == 0)){
-            echo "Preencha seu email";
+            echo strlen($_POST['email']);
         }else if(strlen($_POST['endereco'] == 0)){
             echo "Preencha seu endereço";
         }else if(strlen($_POST['telefone'] == 0)){
@@ -34,8 +34,10 @@
             
             if(mysqli_query($conexao, $sql_code)){
                 echo"Usuário cadastrado com sucesso!";
+                header("Location: cadastro.php");
             }else{
-                echo "Erro" . mysqli_connect_error($conexao);
+                echo "Erro".mysqli_connect_error($conexao);
+                header("Location: cadastro.php");
             }
             mysqli_close($conexao);
         }
