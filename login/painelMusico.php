@@ -73,7 +73,13 @@
             <input type="text" name="bio" class="bio">
             <input type="submit" name="enviar" class="butEnviar">
         </form>
-    </div>   
+    </div>
+    <div class="mural2">
+        <ul>
+            <li><a href=""><img src="" alt=""></a></li>
+            <li><a href=""><img src="" alt=""></a></li>
+        </ul>
+    </div>
     <?phpinclude("rodape.php");?>
 </body>
 </html>
