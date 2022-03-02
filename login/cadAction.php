@@ -1,13 +1,13 @@
 <?php
     session_start();
     include('conexao.php');
-    $cpf_cnpj = filter_input(INPUT_POST, 'cpf_cnpj', FILTER_SANITIZE_NUMBER_INT);
-    $nome_fantasia = filter_input(INPUT_POST, 'nome_fantasia', FILTER_SANITIZE_STRING);
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-    $telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_NUMBER_INT);
-    $genero_musical = filter_input(INPUT_POST, 'genero_musical', FILTER_SANITIZE_STRING);
-    $cache_show = filter_input(INPUT_POST, 'cache_show', FILTER_SANITIZE_NUMBER_FLOAT);
-    $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
+    $cpf_cnpj = $_POST['cpf_cnpj'];
+    $nome_fantasia = $_POST['nome_fantasia'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $genero_musical = $_POST['genero_musical'];
+    $cache_show = $_POST['cache_show'];
+    $senha = $_POST['senha'];
     $data_entrada = NOW();
 
     $sql_code = "INSERT INTO user_musico values ('$cpf_cnpj', '$nome_fantasia', 
