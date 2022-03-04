@@ -76,6 +76,7 @@
     </div>
     <div class="mural2">
         <ul>
+            <p><h1>Midias dos trabalhos</h1></p>
             <li><a href=""><img src="" alt=""></a></li>
             <li><a href=""><img src="" alt=""></a></li>
         </ul>
