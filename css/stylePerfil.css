@@ -9,7 +9,7 @@ body{
     height: 100vh;
     grid-template-rows: 140px 1fr 80px;
     grid-column: 1fr 1fr 1fr;
-    grid-template-areas: "menu" "perfil" "mural";
+    grid-template-areas: "menu" "perfil" "mural" "mural2";
 }
 
 body{
@@ -87,6 +87,21 @@ body{
     border-radius: 5px;
     background-image: linear-gradient(#FBBF01, #FA8B01);
     position: absolute;
+}
+
+.mural2 {
+    grid-area: "mural2";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mural2 ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
 }
 
 .rodape{

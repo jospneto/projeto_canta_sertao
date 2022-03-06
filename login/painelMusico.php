@@ -61,7 +61,6 @@
     </div>
     <div class="mural">
         <?php
-            include('conexao.php');
             $sql = "SELECT * FROM user_contrante WHERE cpf_cnpj";
             $buscar = mysqli_query($conexao, $sql);
             $dados = mysqli_fetch_array($buscar);
@@ -77,10 +76,10 @@
     <div class="mural2">
         <ul>
             <p><h1>Midias dos trabalhos</h1></p>
-            <li><a href=""><img src="" alt=""></a></li>
-            <li><a href=""><img src="" alt=""></a></li>
+            <li><a href=><img src="/img/Spotify.png" alt=""></a></li>
+            <li><a href=""><img src="/img/YouTube.png" alt=""></a></li>
         </ul>
     </div>
-    <?phpinclude("rodape.php");?>
+    <?phpinclude("./rodape.php");?>
 </body>
 </html>

@@ -15,9 +15,9 @@
       <h2>Primeiro nos diga quem você é:</h2>
       <ul>
         <li><img src="/img/music 1.png" alt=""></li>
-        <a href="/login/cadastro.php"><p>Músico</p></a>
+        <a href="/cadastro/cadastroArtista.php"><p>Músico</p></a>
         <li><img src="/img/businessman 1.png" alt=""></li>
-        <a href="/cadastro/cadastro.php"><p>Contratante</p></a>
+        <a href="/cadastro/cadastroContra.php"><p>Contratante</p></a>
       </ul>
   </div>
   <?php
