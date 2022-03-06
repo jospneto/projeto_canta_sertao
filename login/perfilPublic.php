@@ -19,12 +19,13 @@
     <div class="perfil">
         <?php
             $sql_code = "SELECT * FROM imagens_musico";
+            $resultado = mysqli_query($conexao, $sql_code);
             echo "<img src=$sql_code heigth='80' width='80'>";
             if(isset($msg) && $msg != false){
                 echo "<p>$msg</p>";
             }
         ?>
-        <h2><?php 
+        <h2><?php
             echo $_SESSION['nome_fantasia'];
         ?></h2>
         <ul class="midias">
@@ -35,8 +36,9 @@
         </ul>
     </div>
     <div class="mural">
-        <p>Quem somos ?</p>
-        <div>
+        <p class="info">Quem somos ?</p>
+        <div class="bioF">
+            
         </div>
         <h1 class="infoM">Midias dos trabalhos</h1>
         <div class="mural2">

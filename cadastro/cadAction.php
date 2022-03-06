@@ -1,5 +1,5 @@
 <?php
-    include('conexao.php');
+    include('/login/conexao.php');
     session_start();
     $cpf_cnpj = trim($_POST['cpf_cnpj']);
     $nome_fantasia = trim($_POST['nome_fantasia']);

@@ -39,18 +39,15 @@
     </nav>
     </div>
     <div class="perfil">
-        <?php
-            if(isset($msg) && $msg != false){
-                echo "<p>$msg</p>";
-            }
-            echo "<img src=$imagem heigth='80' width='80'>";
-        ?>
+        <img src="" alt="">
         <form action="" method="POST" enctype="multipart/form-data">
             Selecione a imagem: <input type="file" name="imagem"/>
             <br/>
             <input type="submit" value="Enviar"/>
 	    </form>
-        <h2><?php echo $_SESSION['nome']; ?></h2>
+        <h2><?php
+            echo $_SESSION['nome']; 
+        ?></h2>
         <ul class="midias">
         <li><a href=""><img src="/img/WhatsApp.png" alt=""></a></li>
         <li><a href=""><img src="/img/msg.png" alt=""></a></li>
@@ -65,6 +62,7 @@
         <?php
             $usuario = $_SESSION['cpf_cnpj'];
             if(isset($POST['bio'])){
+                $usuario = $_SESSION['cpf_cnpj'];
                 $bio = $POST['bio'];
                 $sql_code = "INSERT INTO bio_contratante (cpf_cnpj, bio) values ('$usuario', '$bio')";
 
@@ -75,9 +73,9 @@
                 }
             }
         ?>
-        <h1 class="info">Quem somos ?<h1>
+        <h1 class="info">Quem somos?<h1>
         <form action="" method="POST">
-            <input type="text" name="bio" class="bio">
+            <input type="text" name="bio" class="bioF">
             <input type="submit" name="enviar" class="butEnviar">
         </form>
         <a href="pesquisa.php"><button name="pesquisa" class="pesquisa">Pesquisar músicos</button></a>

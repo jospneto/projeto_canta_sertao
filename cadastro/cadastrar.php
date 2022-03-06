@@ -1,5 +1,5 @@
 <?php
-    include("conexao.php");
+    include("/login/conexao.php");
     session_start();
     if(isset($_POST['cpf_cnpj'])){    
         $cpf_cnpj = $_POST['cpf_cnpj'];

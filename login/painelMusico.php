@@ -24,6 +24,10 @@
         }
     }
 ?>
+<?php
+    $sql_code = "SELECT * FROM imagens_musico";
+    $con = mysqli_query($conexao, $sql_code) or die($conexao->erro);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,12 +44,21 @@
     </div>
     <div class="perfil">
         <?php
-            $sql_code = "SELECT * FROM imagens_musico where idImagem = 3";
-            echo "<img src=$sql_code heigth='80' width='80'>";
             if(isset($msg) && $msg != false){
                 echo "<p>$msg</p>";
+                unset($msg);
             }
         ?>
+        <?php
+            while($dado = $con->fetch_assoc()){
+
+            }
+        ?>
+        <tr>
+            <td><?php echo$dado['idImagem'];?><td>
+            <td><img src="<?php echo$dado['iMg'];?>" alt=""><td>
+            <td><?php echo$dado['data_entrada'];?><td>
+        </tr>
         <form action="" method="POST" enctype="multipart/form-data">
             Selecione a imagem: <input type="file" name="imagem"/>
             <br/>
@@ -64,21 +77,20 @@
     </div>
     <div class="mural">
         <?php
-           $usuario = $_SESSION['cpf_cnpj'];
             if(isset($POST['bio'])){
+                $usuario = $_SESSION['cpf_cnpj'];
                 $bio = $POST['bio'];
-                $sql_code = "INSERT INTO bio_contratante (cpf_cnpj, bio) values ('$usuario', '$bio')";
-
+                $sql_code = "INSERT INTO bio_musico (cpf_cnpj, bio) values ('$usuario', '$bio')";
                 if(mysqli_query($conexao, $sql_code)){
-                    $msg = "Dados enviados com sucesso!";
+                    $msg2 = "Dados enviados com sucesso!";
                 }else{
-                    $msg = "Falha ao enviar o dados!";
+                    $msg2 = "Falha ao enviar o dados!";
                 }
             }
         ?>
-        <h1 class="info">Quem somos ?<h1>
+        <h1 class="info">Quem somos?<h1>
         <form action="" method="POST">
-            <input type="text" name="bio" class="bio">
+            <input type="text" name="bio" class="bioF">
             <input type="submit" name="enviar" class="butEnviar">
         </form>
         <?php
