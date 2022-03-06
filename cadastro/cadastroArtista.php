@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?php session_start()?>
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -23,14 +23,14 @@
         <h1 class="h3 mb-3 font-weight-normal">Faça seu cadastro</h1>
         <?php 
             if(isset($_SESSION['msg'])){
-                echo $_SESSION['msg'];
-                unset($_SESSION['msg']);
+              echo $_SESSION['msg'];
+              unset($_SESSION['msg']);
             }
         ?>
         <label for="inputNumber" class="sr-only">CPF ou CNPJ</label>
         <input type="number" name="cpf_cnpj" id="inputNumber" class="form-control" placeholder="Seu CPF ou CNPJ" required autofocus>
         <label for="inputText" class="sr-only">Nome fantasia</label>
-        <input type="text" name="nome_fantasia" id="inputText" class="form-control" placeholder="Nome empresa" required>
+        <input type="text" name="nome_fantasia" id="inputText" class="form-control" placeholder="Nome fantasia" required>
         <label for="inputEmail" class="sr-only">Email</label>
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required>
         <label for="inputText" class="sr-only">Endereço</label>
