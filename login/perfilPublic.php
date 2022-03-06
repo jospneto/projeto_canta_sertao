@@ -21,6 +21,7 @@
             if(isset($msg) && $msg != false){
                 echo "<p>$msg</p>";
             }
+            echo "<img>";
         ?>
         <h2><?php echo $_SESSION['nome_fantasia']; ?></h2>
         <ul class="midias">
@@ -32,13 +33,24 @@
     </div>
     <div class="mural">
         <p>Quem somos ?</p>
-    </div>
-    <div class="mural2">
-        <ul>
-            <p><h1>Midias dos trabalhos</h1></p>
-            <li><a href=><img src="/img/Spotify.png" alt=""></a></li>
-            <li><a href=""><img src="/img/YouTube.png" alt=""></a></li>
-        </ul>
+        <div>
+            <?php
+                $sql_code = "SELECT * FROM bio_musico";
+                if(mysqli_query($conexao, $sql_code)){
+                    echo $sql_code;
+                }else{
+                    echo "Erro".mysqli_connect_error($conexao);
+                }
+                mysqli_close($conexao);
+            ?>
+        </div>
+        <h1 class="infoM">Midias dos trabalhos</h1>
+        <div class="mural2">
+            <ul class="midiasMusic">
+                <li><a href=><img src="/img/Spotify.png" alt=""></a>Spotify</li>
+                <li><a href=""><img src="/img/YouTube.png" alt=""></a>YouTube</li>
+            </ul>
+        <div>
     </div>
     <?php
         include("rodape.php");

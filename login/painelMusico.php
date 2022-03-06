@@ -59,30 +59,40 @@
         <li><a href=""><img src="/img/Facebook (1).png" alt=""></a></li>
         </ul>
         <p>
-            <a href="logout.php"><button>Sair</button></a>
+            <a href="logout.php"><button class="logout">Sair</button></a>
         </p>
     </div>
     <div class="mural">
         <?php
-            $sql = "SELECT * FROM user_contrante WHERE cpf_cnpj";
-            $buscar = mysqli_query($conexao, $sql);
-            $dados = mysqli_fetch_array($buscar);
-            $bio = $POST['bio'];
-            $sql_code = "INSERT INTO bio_contratante (cpf_cnpj, bio) values ('$dados', '$bio')";
+           $usuario = $_SESSION['cpf_cnpj'];
+           if(isset($POST['bio'])){
+               $bio = $POST['bio'];
+               $sql_code = "INSERT INTO bio_contratante (cpf_cnpj, bio) values ('$usuario', '$bio')";
+
+               if(mysqli_query($conexao, $sql_code)){
+                   $msg = "Dados enviados com sucesso!";
+               }else{
+                   $msg = "Falha ao enviar o dados!";
+               }
+           }
         ?>
-        <p>Quem somos ?</p>
+        <h1 class="info">Quem somos ?<h1>
         <form action="" method="POST">
             <input type="text" name="bio" class="bio">
             <input type="submit" name="enviar" class="butEnviar">
         </form>
+        <?php
+            if(isset($msg2) && $msg2 != false){
+                echo "<p>$msg2</p>";
+            }
+        ?>
+        <h1 class="infoM">Midias dos trabalhos</h1>
+        <div class="mural2">
+            <ul class="midiasMusic">
+                <li><a href=><img src="/img/Spotify.png" alt=""></a>Spotify</li>
+                <li><a href=""><img src="/img/YouTube.png" alt=""></a>YouTube</li>
+            </ul>
+        <div>
     </div>
-    <div class="mural2">
-        <ul>
-            <p><h1>Midias dos trabalhos</h1></p>
-            <li><a href=><img src="/img/Spotify.png" alt=""></a></li>
-            <li><a href=""><img src="/img/YouTube.png" alt=""></a></li>
-        </ul>
-    </div>
-    <?phpinclude("./rodape.php");?>
 </body>
 </html>

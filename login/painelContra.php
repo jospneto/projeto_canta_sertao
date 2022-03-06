@@ -58,25 +58,29 @@
         <li><a href=""><img src="/img/Facebook (1).png" alt=""></a></li>
         </ul>
         <p>
-            <a href="logout.php"><button>Sair</button></a>
+            <a href="logout.php"><button class="logout">Sair</button></a>
         </p>
     </div>
     <div class="mural">
         <?php
-            include('conexao.php');
-            $sql = "SELECT * FROM user_contrante WHERE cpf_cnpj";
-            $buscar = mysqli_query($conexao, $sql);
-            $dados = mysqli_fetch_array($buscar);
-            $bio = $POST['bio'];
-            $sql_code = "INSERT INTO bio_contratante (cpf_cnpj, bio) values ('$dados', '$bio')";
+            $usuario = $_SESSION['cpf_cnpj'];
+            if(isset($POST['bio'])){
+                $bio = $POST['bio'];
+                $sql_code = "INSERT INTO bio_contratante (cpf_cnpj, bio) values ('$usuario', '$bio')";
+
+                if(mysqli_query($conexao, $sql_code)){
+                    $msg = "Dados enviados com sucesso!";
+                }else{
+                    $msg = "Falha ao enviar o dados!";
+                }
+            }
         ?>
-        <p>Quem somos ?</p>
+        <h1 class="info">Quem somos ?<h1>
         <form action="" method="POST">
             <input type="text" name="bio" class="bio">
             <input type="submit" name="enviar" class="butEnviar">
         </form>
         <a href="pesquisa.php"><button name="pesquisa" class="pesquisa">Pesquisar músicos</button></a>
     </div>   
-    <?phpinclude("rodape.php");?>
 </body>
 </html>

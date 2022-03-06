@@ -7,9 +7,11 @@ body{
     padding: 0;
     display: grid;
     height: 100vh;
-    grid-template-rows: 140px 1fr 80px;
+    grid-template-rows: 120px 1fr 80px;
     grid-column: 1fr 1fr 1fr;
     grid-template-areas: "menu" "perfil" "mural" "mural2";
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body{
@@ -28,29 +30,44 @@ body{
 
 .perfil{
     grid-area: "perfil";
-    display: flex;
-    padding: 20px;
+    padding: 5px;
     width: 25pc;
-    height: 100%;
-    justify-content: center;
-    flex-direction: column;
+    height: 536px;
+    display: flex;
     align-items: center;
+    justify-content:space-around;
+    flex-direction: column;
     background-color: #CB1717;
 }
 
-.perfil ul li{
-    display: inline;
+.perfil .midias{
+    position: absolute;
+    left: 102px;
+    bottom: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
 }
 
 .perfil img{
     border-radius: 50%;
 }
 
+.perfil .logout{
+    background-image: linear-gradient(#CD851A, #FBBF01);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
 .mural{
     grid-area: "mural";
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
 }
 
@@ -64,7 +81,7 @@ body{
     background-color: #CC3D16;
 }
 
-.mural p{
+.mural .info{
     display: block;
     align-items: center;
     justify-content: center;
@@ -78,8 +95,8 @@ body{
 }
 
 .mural .butEnviar{
-    top: 62%;
-    left: auto;
+    top: 38%;
+    right: 20%;
     height: 30px;
     padding: 5px;
     width: 100px;
@@ -87,21 +104,41 @@ body{
     border-radius: 10px;
     background-image: linear-gradient(#FBBF01, #FA8B01);
     position: absolute;
+    cursor: pointer;
 }
 
 .mural2 {
-    grid-area: "mural2";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    width: 500px;
+    height: 200px;
+    top: 67%;
+    position: absolute;
+    left: 35%;
+    border-radius: 10px;
+    background-color: #CC3D16;
 }
 
-.mural2 ul{
+.mural2 .midiasMusic{
+    position: absolute;
+    bottom: 10px;
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.mural .infoM{
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 0;
+    text-align: center;
+    bottom: -18%;
+    left: 45%;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    top: 10%;
+    position: absolute;
+}
+
+.mural ul{
+    list-style: none;
 }
 
 .mural .pesquisa{
@@ -114,31 +151,4 @@ body{
     background-image: linear-gradient(#FBBF01, #FA8B01);
     position: absolute;
     overflow: hidden;
-}
-
-.rodape{
-    grid-area: "rodape";
-    background-color: tomato;
-    position: sticky;
-    height: 80px;
-    bottom: 0px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    list-style: none;
-    font-size: 0.7rem;
-    font-family: 'Lato', sans-serif;
-}
-
-.rodape ul li{
-    display: inline;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-}
-
-.rodape ul li a{
-    padding: 0px;
-    text-decoration: none;
 }

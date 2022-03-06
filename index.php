@@ -11,7 +11,7 @@
   <nav class="menu">
     <img src="img/Logo.png">
     <ul>
-      <li><a href="https://composers654333010.wordpress.com/contact/?preview_id=8&preview_nonce=ca3a7f5d5b&preview=true">Contatos</a></li>
+      <li><a href="https://cantasertao.wordpress.com/">Contatos</a></li>
       <li class="login"><a href="loginAcess.php">Login</a></li></a>
       <li class="cadastro"><a href="cadastroAcess.php">Cadastro</a></li>
     </ul>
