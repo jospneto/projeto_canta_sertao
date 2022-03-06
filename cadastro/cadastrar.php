@@ -1,6 +1,7 @@
 <?php
     include("conexao.php");
-    if(isset($_POST['cpf_cnpj']) && !empty($_POST['cpf_cnpj'])){    
+    session_start();
+    if(isset($_POST['cpf_cnpj'])){    
         $cpf_cnpj = $_POST['cpf_cnpj'];
         $nome = $_POST['nome'];
         $nome_empresa = $_POST['nome_empresa'];
@@ -14,9 +15,10 @@
         '$email', '$endereco', '$telefone', '$data_entrada', '$senha')";
 
         if(mysqli_query($conexao, $sql_code)){
-            echo"Usuário cadastrado com sucesso!";
+            $_SESSION['msg'] = "Usuário cadastrado com sucesso!";
         }else{
-            echo"Erro".mysqli_connect_error($conexao);
+            $_SESSION['msg'] = "Erro".mysqli_connect_error($conexao);
+            header("Location: cadastroContra.php");
         }
         mysqli_close($conexao);
     }else{

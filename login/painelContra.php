@@ -43,8 +43,9 @@
             if(isset($msg) && $msg != false){
                 echo "<p>$msg</p>";
             }
+            echo "<img src=$imagem heigth='80' width='80'>";
         ?>
-        <form action="painel.php" method="POST" enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data">
             Selecione a imagem: <input type="file" name="imagem"/>
             <br/>
             <input type="submit" value="Enviar"/>

@@ -7,6 +7,6 @@
     
     while($rows_musicos = mysqli_fetch_array($resultado_musicos)){
         echo "Nome do músico: ".$rows_musico['nome_fantasia']."<br>";
-        header("Location: painelMusico.php");
+        header("Location: perfilPublic.php");
     }
 ?>
