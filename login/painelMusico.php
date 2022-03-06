@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     include('conexao.php');
 
     $msg = false;
@@ -48,7 +49,7 @@
             <br/>
             <input type="submit" value="Enviar"/>
 	    </form>
-        <h2><?php echo $_SESSION['nome']; ?></h2>
+        <h2><?php echo $_SESSION['nome_fantasia']; ?></h2>
         <ul class="midias">
         <li><a href=""><img src="/img/WhatsApp.png" alt=""></a></li>
         <li><a href=""><img src="/img/msg.png" alt=""></a></li>

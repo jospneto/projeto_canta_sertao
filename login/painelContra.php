@@ -1,4 +1,5 @@
-<?php 
+<?php
+    session_start();
     include('conexao.php');
 
     $msg = false;
@@ -73,6 +74,7 @@
             <input type="text" name="bio" class="bio">
             <input type="submit" name="enviar" class="butEnviar">
         </form>
+        <a href="pesquisa.php"><button name="pesquisa" class="pesquisa">Pesquisar músicos</button></a>
     </div>   
     <?phpinclude("rodape.php");?>
 </body>
