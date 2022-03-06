@@ -40,7 +40,7 @@
     </div>
     <div class="perfil">
         <?php
-            $sql_code = "SELECT FROM imagens_musico where idImagem = 3";
+            $sql_code = "SELECT * FROM imagens_musico where idImagem = 3";
             echo "<img src=$sql_code heigth='80' width='80'>";
             if(isset($msg) && $msg != false){
                 echo "<p>$msg</p>";
@@ -65,16 +65,16 @@
     <div class="mural">
         <?php
            $usuario = $_SESSION['cpf_cnpj'];
-           if(isset($POST['bio'])){
-               $bio = $POST['bio'];
-               $sql_code = "INSERT INTO bio_contratante (cpf_cnpj, bio) values ('$usuario', '$bio')";
+            if(isset($POST['bio'])){
+                $bio = $POST['bio'];
+                $sql_code = "INSERT INTO bio_contratante (cpf_cnpj, bio) values ('$usuario', '$bio')";
 
-               if(mysqli_query($conexao, $sql_code)){
-                   $msg = "Dados enviados com sucesso!";
-               }else{
-                   $msg = "Falha ao enviar o dados!";
-               }
-           }
+                if(mysqli_query($conexao, $sql_code)){
+                    $msg = "Dados enviados com sucesso!";
+                }else{
+                    $msg = "Falha ao enviar o dados!";
+                }
+            }
         ?>
         <h1 class="info">Quem somos ?<h1>
         <form action="" method="POST">

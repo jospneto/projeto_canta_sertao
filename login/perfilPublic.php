@@ -1,6 +1,6 @@
 <?php 
-    session_start();
     include('conexao.php');
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,12 +18,15 @@
     </div>
     <div class="perfil">
         <?php
+            $sql_code = "SELECT * FROM imagens_musico";
+            echo "<img src=$sql_code heigth='80' width='80'>";
             if(isset($msg) && $msg != false){
                 echo "<p>$msg</p>";
             }
-            echo "<img>";
         ?>
-        <h2><?php echo $_SESSION['nome_fantasia']; ?></h2>
+        <h2><?php 
+            echo $_SESSION['nome_fantasia'];
+        ?></h2>
         <ul class="midias">
         <li><a href=""><img src="/img/WhatsApp.png" alt=""></a></li>
         <li><a href=""><img src="/img/msg.png" alt=""></a></li>
@@ -34,15 +37,6 @@
     <div class="mural">
         <p>Quem somos ?</p>
         <div>
-            <?php
-                $sql_code = "SELECT * FROM bio_musico";
-                if(mysqli_query($conexao, $sql_code)){
-                    echo $sql_code;
-                }else{
-                    echo "Erro".mysqli_connect_error($conexao);
-                }
-                mysqli_close($conexao);
-            ?>
         </div>
         <h1 class="infoM">Midias dos trabalhos</h1>
         <div class="mural2">
