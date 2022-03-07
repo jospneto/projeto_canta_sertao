@@ -1,6 +1,6 @@
 <?php
-    include("/login/conexao.php");
     session_start();
+    include("/login/conexao.php");
     if(isset($_POST['cpf_cnpj'])){    
         $cpf_cnpj = $_POST['cpf_cnpj'];
         $nome = $_POST['nome'];
@@ -8,7 +8,7 @@
         $email = $_POST['email'];
         $endereco = $_POST['endereco'];
         $telefone = $_POST['telefone'];
-        $data_entrada = date('Y/m/d');
+        $data_entrada = date('Y-m-d');
         $senha = md5($_POST['senha']);
 
         $sql_code = "INSERT INTO user_contratante values ('$cpf_cnpj', '$nome', '$nome_empresa', 
