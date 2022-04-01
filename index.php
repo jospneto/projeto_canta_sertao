@@ -17,7 +17,12 @@
     </ul>
   </nav>
   <div class="conteudo">
-    <h2>Procure artistas para seu <br> evento de forma rápida e simples</h2>
+    <ul class="listaPesquisa">
+      <h2>Procure artistas para seu <br> evento de forma rápida e simples</h2>
+      <form action="" class="pesquisa">
+        <img src="./img/Search.png" alt=""><input type="text" name="pesquisa" placeholder="Pesquisar músicos">
+      </form>
+    </ul>
     <ul>
       <li><img src="/img/cadastro.png" alt=""></li>
       <li><img src="img/gratis.png" alt=""></li>
