@@ -12,7 +12,13 @@
     <img src="img/Logo.png">
     <ul>
       <li><a href="https://cantasertao.wordpress.com/">Contatos</a></li>
-      <li class="login"><a href="loginAcess.php">Login</a></li></a>
+      <li class="login">Login
+        <form class="loginAcess" action="/login/index.php" method="POST">
+          <input type="email" name="email" placeholder="Digite seu email"><br>
+          <input type="password" name="senha" placeholder="Digite sua senha"><br>
+          <input type="submit" class="butEnviar" value="Entrar">
+        </form>
+      </li>
       <li class="cadastro"><a href="cadastroAcess.php">Cadastro</a></li>
     </ul>
   </nav>
@@ -28,6 +34,18 @@
       <li><img src="img/gratis.png" alt=""></li>
     </ul>
   </div>
+  <section class="artistas">
+      <ul>
+        <li><img src="" alt=""></li>
+        <h3>Artista1</h3>
+        <li><img src="" alt=""></li>
+        <h3>Artista1</h3>
+        <li><img src="" alt=""></li>
+        <h3>Artista1</h3>
+        <li><img src="" alt=""></li>
+        <h3>Artista1</h3>
+      </ul>
+  </section>
   <?php
     include("rodape.php");
   ?>
