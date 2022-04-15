@@ -66,6 +66,25 @@
         <li><img src="./img/artistas/img4.png" alt=""><h3>Artista1</h3></li>
     </ul>
   </section>
+  <section class="avaliacoes">
+    <h1>AVALIE NOSSOS MÚSICOS</h1>
+    <div>
+      <h2>Funalo de tal</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nihil minus cumque blanditiis pariatur accusamus qui error, natus dolorem cupiditate, inventore tempora vitae nobis cum nostrum! Ipsa eligendi vero vel?</p>
+    </div>
+    <div>
+      <h2>Funalo de tal</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nihil minus cumque blanditiis pariatur accusamus qui error, natus dolorem cupiditate, inventore tempora vitae nobis cum nostrum! Ipsa eligendi vero vel?</p>
+    </div>
+    <div>
+      <h2>Funalo de tal</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nihil minus cumque blanditiis pariatur accusamus qui error, natus dolorem cupiditate, inventore tempora vitae nobis cum nostrum! Ipsa eligendi vero vel?</p>
+    </div>
+    <div>
+      <h2>Funalo de tal</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nihil minus cumque blanditiis pariatur accusamus qui error, natus dolorem cupiditate, inventore tempora vitae nobis cum nostrum! Ipsa eligendi vero vel?</p>
+    </div>
+  </section>
   <?php
     include("rodape.php");
   ?>
