@@ -20,13 +20,13 @@
             <input type="submit" class="butEnviar" value="Entrar">
           </form>
         </li>
-        <li class="cadastro"><a href="cadastroAcess.php">Cadastro</a></li>
+        <li class="cadastro"><a href="./cadastro/cadastroArtista.php">Cadastro</a></li>
       </ul>
     </nav>
     <div class="conteudo">
       <ul class="listaPesquisa">
         <h2>Procure artistas para seu <br> evento de forma rápida e simples</h2>
-        <form action="" class="pesquisa">
+        <form action="./login/pesquisar.php" class="pesquisa" method="POST">
           <img src="./img/Search.png" alt=""><input type="text" name="pesquisa" placeholder="Pesquisar músicos">
         </form>
       </ul>
