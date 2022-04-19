@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/img/Logo.png">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleCadastro.css">
     <title>Cadastro</title>
 
     <!-- Principal CSS do Bootstrap -->
@@ -17,10 +17,10 @@
     <link href="/css/signin.css" rel="stylesheet">
   </head>
 
-  <body class="text-center">
+  <body class="text-center" class="conteudo">
+        <img class="mb-5 col-4" src="/img/Logo.png" alt="">
         <form class="form-signin" method="POST" action="cadAction.php">
-        <img class="mb-2" src="/img/Logo.png" alt="">
-        <h1 class="h3 mb-3 font-weight-normal">Faça seu cadastro</h1>
+        <h1 class="h3 mb-3 font-weight-normal text-light">Faça seu cadastro</h1>
         <?php 
             if(isset($_SESSION['msg'])){
               echo $_SESSION['msg'];
@@ -45,5 +45,5 @@
         <input type="password" name="senha" id="inputPassword" class="form-control" placeholder="Senha" required>
         <button class="btn btn-lg btn-danger btn-block" type="submit">Cadastrar</button>
         </form>
-    </body>
+  </body>
 </html>

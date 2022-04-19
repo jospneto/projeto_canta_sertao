@@ -71,18 +71,22 @@
     <div>
       <h2>Funalo de tal</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nihil minus cumque blanditiis pariatur accusamus qui error, natus dolorem cupiditate, inventore tempora vitae nobis cum nostrum! Ipsa eligendi vero vel?</p>
+      <img src="./img/bgImagens/avaliacao-remove.png" alt="">
+    </div>
+    <div>
+      <img src="./img/bgImagens/avaliacao-remove.png" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nihil minus cumque blanditiis pariatur accusamus qui error, natus dolorem cupiditate, inventore tempora vitae nobis cum nostrum! Ipsa eligendi vero vel?</p>
+      <h2>Funalo de tal</h2>
     </div>
     <div>
       <h2>Funalo de tal</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nihil minus cumque blanditiis pariatur accusamus qui error, natus dolorem cupiditate, inventore tempora vitae nobis cum nostrum! Ipsa eligendi vero vel?</p>
+      <img src="./img/bgImagens/avaliacao-remove.png" alt="">
     </div>
     <div>
-      <h2>Funalo de tal</h2>
+      <img src="./img/bgImagens/avaliacao-remove.png" alt="">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nihil minus cumque blanditiis pariatur accusamus qui error, natus dolorem cupiditate, inventore tempora vitae nobis cum nostrum! Ipsa eligendi vero vel?</p>
-    </div>
-    <div>
       <h2>Funalo de tal</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nihil minus cumque blanditiis pariatur accusamus qui error, natus dolorem cupiditate, inventore tempora vitae nobis cum nostrum! Ipsa eligendi vero vel?</p>
     </div>
   </section>
   <?php
