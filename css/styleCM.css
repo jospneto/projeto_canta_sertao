@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 100vh;
+    grid-area: "form" "rodape";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+h1{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape{
+    position: absolute;
+    bottom: 0;
+}

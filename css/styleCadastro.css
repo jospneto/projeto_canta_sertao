@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 120px, 1fr, 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "conteudo" "rodape";
+    overflow: hidden;
+}
+
+body{
+    background-image: url("../img/bgImagens/bgImage3.jpg")
+}
+
+.rodape a:link{
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.rodape{
+    grid-area: "rodape";
+    background-color: tomato;
+    position: sticky;
+    height: 60px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    font-size: 0.7rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.rodape ul li{
+    display: inline;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rodape ul li a{
+    padding: 0px;
+    text-decoration: none;
+}
