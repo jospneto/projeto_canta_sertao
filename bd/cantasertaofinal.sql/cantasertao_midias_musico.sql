@@ -21,7 +21,7 @@
 
 DROP TABLE IF EXISTS `midias_musico`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8*/;
 CREATE TABLE `midias_musico` (
   `cpf_musico` bigint NOT NULL,
   `link_midia` varchar(35) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE `midias_musico` (
   PRIMARY KEY (`link_midia`),
   KEY `fk_cpf_musico_midia` (`cpf_musico`),
   CONSTRAINT `fk_cpf_musico_midia` FOREIGN KEY (`cpf_musico`) REFERENCES `user_musico` (`cpf_cnpj`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

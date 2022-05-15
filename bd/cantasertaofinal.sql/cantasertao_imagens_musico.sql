@@ -21,13 +21,13 @@
 
 DROP TABLE IF EXISTS `imagens_musico`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8*/;
 CREATE TABLE `imagens_musico` (
   `idImagem` int NOT NULL AUTO_INCREMENT,
-  `iMg` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `iMg` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `data_entrada` date DEFAULT NULL,
   PRIMARY KEY (`idImagem`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

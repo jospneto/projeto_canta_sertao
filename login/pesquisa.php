@@ -10,10 +10,34 @@
 </head>
 <body>
     <div class="d-flex justify-content-center">
-      <form class="form-inline my-2 my-lg-0" method="POST" action="pesquisar.php">
+      <form class="form-inline my-2 my-lg-0" method="POST" action="perfilPublic.php">
         <input class="form-control mr-sm-2" type="search" name="pesquisa" placeholder="Pesquisar" aria-label="Pesquisar">
         <button class="btn btn-danger my-2 my-sm-0" type="submit">Pesquisar</button>
       </form>
     <div>
+    <?php
+     require_once "../login/conexao.php";
+    session_start();
+
+    $pesquisar = $_POST['pesquisa'];
+    $mysqli = new mysqli('localhost:3307','root','','cantasertao');
+    $sql_code = "SELECT * FROM user_musico WHERE nome_fantasia LIKE '%$pesquisar%' LIMIT 5";
+    $resultado_musicos = mysqli_query($conexao, $sql_code);
+   
+    if( isset($_POST['nome_fantasia']) && isset($_POST['genero_musical']) )  { 
+        $resultado_musicos = $_POST['nome_fantasia'];
+        $resultado_musicos = $_POST['genero_musical'];
+        
+   }
+    
+    if($resultado_musicos){
+        while($rows_musicos = mysqli_fetch_array($resultado_musicos)){
+            header("Location: perfilPublic.php");
+            exit;
+        }
+    }else{
+        echo "Músico não encontrado!";
+    }
+?>
 </body>
 </html>

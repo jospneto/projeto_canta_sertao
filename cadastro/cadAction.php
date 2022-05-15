@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('/login/conexao.php');
+    require_once "../login/Conexao.php";
     if(isset($_POST['cpf_cnpj'])){
         $cpf_cnpj = trim($_POST['cpf_cnpj']);
         $nome_fantasia = trim($_POST['nome_fantasia']);

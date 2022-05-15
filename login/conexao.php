@@ -1,9 +1,9 @@
 <?php
 
 $usuario = 'root';
-$senha = 'neto0412';
+$senha = 'root1234';
 $database = 'cantasertao';
-$host = 'localhost:3306';
+$host = 'localhost:3307';
 
 $conexao = new mysqli($host, $usuario, $senha, $database);
 

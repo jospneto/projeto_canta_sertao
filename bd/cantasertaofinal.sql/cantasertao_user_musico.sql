@@ -21,7 +21,7 @@
 
 DROP TABLE IF EXISTS `user_musico`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8*/;
 CREATE TABLE `user_musico` (
   `cpf_cnpj` bigint NOT NULL,
   `nome_fantasia` varchar(50) NOT NULL,
@@ -31,9 +31,9 @@ CREATE TABLE `user_musico` (
   `genero_musical` varchar(35) NOT NULL,
   `data_entrada` date NOT NULL,
   `cache_show` float NOT NULL,
-  `senha` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `senha` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`cpf_cnpj`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

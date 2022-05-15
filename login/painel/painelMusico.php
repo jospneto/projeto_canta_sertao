@@ -1,6 +1,7 @@
 <?php 
     session_start();
-    include('conexao.php');
+    
+    require_once "../conexao.php";
 
     $msg = false;
     if(isset($_FILES['imagem'])){
@@ -54,10 +55,14 @@
 
             }
         ?>
+       
         <tr>
-            <td><?php echo$dado['idImagem'];?><td>
-            <td><img src="<?php echo$dado['iMg'];?>" alt=""><td>
-            <td><?php echo$dado['data_entrada'];?><td>
+            
+      
+
+            <td><?php echo $dado = isset($dado[1]) ? $dado[1] : null;['idImagem'];?><td>
+            <td><img src="<?php echo $dado= isset($dado[1]) ? $dado[1] : null;['iMg'];?>" alt=""><td>
+            <td><?php echo $dado= isset($dado[1]) ? $dado[1] : null;['data_entrada'];?><td>
         </tr>
         <form action="" method="POST" enctype="multipart/form-data">
             Selecione a imagem: <input type="file" name="imagem"/>

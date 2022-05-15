@@ -1,5 +1,6 @@
 <?php 
-    include('conexao.php');
+    require_once "../login/conexao.php";
+    
     session_start();
 ?>
 <!DOCTYPE html>
@@ -8,6 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.11.0/build/cssnormalize/cssnormalize-min.css">
     <link rel="stylesheet" href="/css/stylePerfil.css">
     <title>Painel</title>
 </head>
@@ -18,6 +20,7 @@
     </div>
     <div class="perfil">
         <?php
+           
             $sql_code = "SELECT * FROM imagens_musico";
             $resultado = mysqli_query($conexao, $sql_code);
             echo "<img src=$sql_code heigth='80' width='80'>";
@@ -26,8 +29,11 @@
             }
         ?>
         <h2><?php
+         
             echo $_SESSION['nome_fantasia'];
         ?></h2>
+
+
         <ul class="midias">
         <li><a href=""><img src="/img/WhatsApp.png" alt=""></a></li>
         <li><a href=""><img src="/img/msg.png" alt=""></a></li>
@@ -37,6 +43,7 @@
     </div>
     <div class="mural">
         <p class="info">Quem somos ?</p>
+      
         <div class="bioF">
             
         </div>
@@ -49,7 +56,7 @@
         <div>
     </div>
     <?php
-        include("rodape.php");
+        require_once "../rodape.php"
     ?>
 </body>
 </html>
