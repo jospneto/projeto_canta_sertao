@@ -6,12 +6,14 @@ body{
     align-items: center;
     align-content: center;
     background-color:#E73A59;
+    text-align: center;
 }
 
 #form{
     padding: 20px;
     border-radius: 8px;
     background-color: #F0D43A;
+    text-align: left;
 }
 
 #buttons{
