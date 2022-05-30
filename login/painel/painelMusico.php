@@ -72,9 +72,9 @@
                     Editar perfil
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Editar mídias</a>
-                    <a class="dropdown-item" href="#">Editar trabalhos</a>
-                    <a class="dropdown-item" href="#">Editar bios</a>
+                    <a class="dropdown-item" href="edicaoPerfil.php">Editar Dados</a>
+                    <a class="dropdown-item" href="edicaoPerfil.php">Editar/Adicionar mídias sociais</a>
+                    <a class="dropdown-item" href="#">Deletar</a>
                 </div>
             </div>
             </div>

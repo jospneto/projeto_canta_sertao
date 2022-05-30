@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color:#E73A59;
+}
+
+#form{
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #F0D43A;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-between;
+}
