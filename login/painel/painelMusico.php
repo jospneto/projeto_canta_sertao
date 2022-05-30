@@ -35,81 +35,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/css/stylePerfil.css">
     <title>Painel</title>
 </head>
 <body>
-    <nav class="menu">
-        <img src="/img/Logo.png">
-    </nav>
-    </div>
     <div class="perfil">
+        <img src="/img/Logo.png">
         <?php
             if(isset($msg) && $msg != false){
                 echo "<p>$msg</p>";
                 unset($msg);
             }
         ?>
-        <?php
-            while($dado = $con->fetch_assoc()){
-
-            }
-        ?>
-       
-        <tr>
-            
-      
-
-            <td><?php echo $dado = isset($dado[1]) ? $dado[1] : null;['idImagem'];?><td>
-            <td><img src="<?php echo $dado= isset($dado[1]) ? $dado[1] : null;['iMg'];?>" alt=""><td>
-            <td><?php echo $dado= isset($dado[1]) ? $dado[1] : null;['data_entrada'];?><td>
-        </tr>
+        <img src="/img/cadastro.png" class="img-fluid border border-warning rounded-circle">
         <form action="" method="POST" enctype="multipart/form-data">
-            Selecione a imagem: <input type="file" name="imagem"/>
-            <br/>
-            <input type="submit" value="Enviar"/>
+            <div class="custom-file">
+                <input type="file" name="imagem" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Escolher imagem</label>
+                <button type="submit" class="btn btn-danger btn-lg">Enviar</button>
+            </div>
 	    </form>
         <h2><?php echo $_SESSION['nome_fantasia']; ?></h2>
-        <ul class="midias">
-        <li><a href=""><img src="/img/WhatsApp.png" alt=""></a></li>
-        <li><a href=""><img src="/img/msg.png" alt=""></a></li>
-        <li><a href=""><img src="/img/Instagram (2).png" alt=""></a></li>
-        <li><a href=""><img src="/img/Facebook (1).png" alt=""></a></li>
-        </ul>
-        <p>
-            <a href="logout.php"><button class="logout">Sair</button></a>
-        </p>
-    </div>
-    <div class="mural">
-        <?php
-            if(isset($POST['bio'])){
-                $usuario = $_SESSION['cpf_cnpj'];
-                $bio = $POST['bio'];
-                $sql_code = "INSERT INTO bio_musico (cpf_cnpj, bio) values ('$usuario', '$bio')";
-                if(mysqli_query($conexao, $sql_code)){
-                    $msg2 = "Dados enviados com sucesso!";
-                }else{
-                    $msg2 = "Falha ao enviar o dados!";
+        <div class="buttons">
+            <div class="dropdown dropright">
+                <button class="btn btn-danger btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Editar perfil
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Editar mídias</a>
+                    <a class="dropdown-item" href="#">Editar trabalhos</a>
+                    <a class="dropdown-item" href="#">Editar bios</a>
+                </div>
+            </div>
+            <a href="./logout.php"><button type="button" class="btn btn-danger btn-lg">Sair</button></a>
+            </div>
+        </div>
+        <div class="mural">
+            <?php
+                if(isset($POST['bio'])){
+                    $usuario = $_SESSION['cpf_cnpj'];
+                    $bio = $POST['bio'];
+                    $sql_code = "INSERT INTO bio_musico (cpf_cnpj, bio) values ('$usuario', '$bio')";
+                    if(mysqli_query($conexao, $sql_code)){
+                        $msg2 = "Dados enviados com sucesso!";
+                    }else{
+                        $msg2 = "Falha ao enviar o dados!";
+                    }
                 }
-            }
-        ?>
-        <h1 class="info">Quem somos?<h1>
-        <form action="" method="POST">
-            <input type="text" name="bio" class="bioF">
-            <input type="submit" name="enviar" class="butEnviar">
-        </form>
-        <?php
-            if(isset($msg2) && $msg2 != false){
-                echo "<p>$msg2</p>";
-            }
-        ?>
-        <h1 class="infoM">Midias dos trabalhos</h1>
-        <div class="mural2">
-            <ul class="midiasMusic">
-                <li><a href=><img src="/img/Spotify.png" alt=""></a>Spotify</li>
-                <li><a href=""><img src="/img/YouTube.png" alt=""></a>YouTube</li>
-            </ul>
-        <div>
+            ?>
+            <?php
+                if(isset($msg2) && $msg2 != false){
+                    echo "<p>$msg2</p>";
+                }
+            ?>
+            <div class="bios">
+                <p><b>Quem somos?</b></p>
+                <div class="card border-warning text-warning" style="width: 38rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Nome artístico - <?php echo $_SESSION['nome_fantasia']; ?></h5>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+                <p><b>Escute nosso trabalho</b></p>
+                <section class="projetos">
+                    <div class="card border-warning text-warning" style="width: 18rem;">
+                        <img class="card-img-top img-fluid border border-warning rounded-circle" src="/img/Spotify.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Stream musical</h5>
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                            <a href="#" class="btn btn-danger">Visitar</a>
+                        </div>
+                    </div>
+                    <div class="card border-warning text-warning" style="width: 18rem;">
+                        <img class="card-img-top img-fluid border border-warning rounded-circle" src="/img/YouTube.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Stream de vídeo</h5>
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                            <a href="#" class="btn btn-danger">Visitar</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
 </body>
 </html>

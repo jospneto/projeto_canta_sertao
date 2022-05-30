@@ -32,8 +32,6 @@
          
             echo $_SESSION['nome_fantasia'];
         ?></h2>
-
-
         <ul class="midias">
         <li><a href=""><img src="/img/WhatsApp.png" alt=""></a></li>
         <li><a href=""><img src="/img/msg.png" alt=""></a></li>

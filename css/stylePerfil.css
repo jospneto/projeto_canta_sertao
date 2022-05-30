@@ -5,150 +5,58 @@
 body{
     margin: 0;
     padding: 0;
-    display: grid;
     height: 100vh;
+    display: flex;
+    justify-content: space-around;
     grid-template-rows: 120px 1fr 80px;
     grid-column: 1fr 1fr 1fr;
-    grid-template-areas: "menu" "perfil" "mural" "mural2";
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-body{
-    background-image: linear-gradient(to bottom, #CC2015, #CD851A);
-    background-repeat: no-repeat;
-}
-
-.menu{
-    grid-area: "menu";
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    grid-template-areas: "perfil" "bios" "rodape";
+    background-image: linear-gradient(coral, #CC2015);
 }
 
 .perfil{
     grid-area: "perfil";
-    padding: 5px;
-    width: 25pc;
-    height: 536px;
+    padding: 10px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content:space-around;
     flex-direction: column;
-    background-color: #CB1717;
 }
 
-.perfil .midias{
-    position: absolute;
-    left: 102px;
-    bottom: 130px;
+.buttons{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    list-style: none;
-}
-
-.perfil img{
-    border-radius: 50%;
-}
-
-.perfil .logout{
-    background-image: linear-gradient(#CD851A, #FBBF01);
-    padding: 10px;
-    border-radius: 10px;
-    width: 100px;
-    font-size: 1.2rem;
-    cursor: pointer;
 }
 
 .mural{
-    grid-area: "mural";
+    grid-area: "bios";
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+.bios{
+    display: flex;
     flex-direction: column;
-}
-
-.mural .bioF{
-    width: 500px;
-    height: 250px;
-    top: 22%;
-    position: absolute;
-    left: 35%;
-    border-radius: 10px;
-    background-color: #CC3D16;
-}
-
-.mural .info{
-    display: block;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0;
-    left: 48%;
     font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    top: 10%;
-    position: absolute;
 }
 
-.mural .butEnviar{
-    top: 38%;
-    right: 20%;
-    height: 30px;
-    padding: 5px;
-    width: 100px;
-    text-align: center;
-    border-radius: 10px;
-    background-image: linear-gradient(#FBBF01, #FA8B01);
-    position: absolute;
-    cursor: pointer;
-}
-
-.mural2 {
-    width: 500px;
-    height: 200px;
-    top: 67%;
-    position: absolute;
-    left: 35%;
-    border-radius: 10px;
-    background-color: #CC3D16;
-}
-
-.mural2 .midiasMusic{
-    position: absolute;
-    bottom: 10px;
-    font-size: 1.2rem;
-    font-family: 'Lato', sans-serif;
-}
-
-.mural .infoM{
+.projetos{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
-    bottom: -18%;
-    left: 45%;
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    top: 10%;
-    position: absolute;
 }
 
-.mural ul{
-    list-style: none;
-}
-
-.mural .pesquisa{
-    right: 40px;
-    top: 50px;
+.projetos img{
+    max-width: 100%;
+    height: 100%;
     width: 100px;
-    height: 50px;
-    padding: 5px;
-    border-radius: 10px;
-    background-image: linear-gradient(#FBBF01, #FA8B01);
-    position: absolute;
-    overflow: hidden;
+    height: 180px;
 }
