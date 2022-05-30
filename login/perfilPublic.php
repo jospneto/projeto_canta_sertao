@@ -28,8 +28,7 @@
                 echo "<p>$msg</p>";
             }
         ?>
-        <h2><?php
-         
+        <h2><?php  
             echo $_SESSION['nome_fantasia'];
         ?></h2>
         <ul class="midias">

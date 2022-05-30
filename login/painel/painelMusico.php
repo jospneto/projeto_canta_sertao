@@ -36,12 +36,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'/>
     <link rel="stylesheet" href="/css/stylePerfil.css">
     <title>Painel</title>
 </head>
 <body>
+    <div class="menu">
+        <div id="logo">
+            <img src="/img/Logo.png">
+        </div>
+        <a href="./logout.php"><button type="button" class="btn btn-warning btn-lg text-light">Sair</button></a>
+    </div> 
+    <section id="body">
     <div class="perfil">
-        <img src="/img/Logo.png">
         <?php
             if(isset($msg) && $msg != false){
                 echo "<p>$msg</p>";
@@ -51,14 +58,16 @@
         <img src="/img/cadastro.png" class="img-fluid border border-warning rounded-circle">
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="custom-file">
-                <input type="file" name="imagem" class="custom-file-input" id="customFile">
-                <label class="custom-file-label" for="customFile">Escolher imagem</label>
-                <button type="submit" class="btn btn-danger btn-lg">Enviar</button>
+                <div class="image">
+                    <input type="file" name="imagem" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Escolher imagem</label>
+                    <button type="submit" class="btn btn-danger btn-lg">Enviar</button>
+                </div>
             </div>
 	    </form>
-        <h2><?php echo $_SESSION['nome_fantasia']; ?></h2>
+        <h2>Bem vindo(a), <?php echo $_SESSION['nome_fantasia']; ?></h2>
         <div class="buttons">
-            <div class="dropdown dropright">
+            <div class="dropdown dropright text-muted">
                 <button class="btn btn-danger btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Editar perfil
                 </button>
@@ -68,56 +77,27 @@
                     <a class="dropdown-item" href="#">Editar bios</a>
                 </div>
             </div>
-            <a href="./logout.php"><button type="button" class="btn btn-danger btn-lg">Sair</button></a>
             </div>
-        </div>
-        <div class="mural">
-            <?php
-                if(isset($POST['bio'])){
-                    $usuario = $_SESSION['cpf_cnpj'];
-                    $bio = $POST['bio'];
-                    $sql_code = "INSERT INTO bio_musico (cpf_cnpj, bio) values ('$usuario', '$bio')";
-                    if(mysqli_query($conexao, $sql_code)){
-                        $msg2 = "Dados enviados com sucesso!";
-                    }else{
-                        $msg2 = "Falha ao enviar o dados!";
-                    }
-                }
-            ?>
-            <?php
-                if(isset($msg2) && $msg2 != false){
-                    echo "<p>$msg2</p>";
-                }
-            ?>
-            <div class="bios">
-                <p><b>Quem somos?</b></p>
-                <div class="card border-warning text-warning" style="width: 38rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Nome artístico - <?php echo $_SESSION['nome_fantasia']; ?></h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-                <p><b>Escute nosso trabalho</b></p>
-                <section class="projetos">
-                    <div class="card border-warning text-warning" style="width: 18rem;">
-                        <img class="card-img-top img-fluid border border-warning rounded-circle" src="/img/Spotify.png" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5 class="card-title">Stream musical</h5>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <a href="#" class="btn btn-danger">Visitar</a>
-                        </div>
-                    </div>
-                    <div class="card border-warning text-warning" style="width: 18rem;">
-                        <img class="card-img-top img-fluid border border-warning rounded-circle" src="/img/YouTube.png" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5 class="card-title">Stream de vídeo</h5>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <a href="#" class="btn btn-danger">Visitar</a>
-                        </div>
-                    </div>
-                </section>
-            </div>
+
+            <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+            <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+            <script>
+            $(function () {
+                $('.dropdown-toggle').dropdown();
+            }); 
+            </script>
         </div>
     </div>
+    </section>
+    <footer class="rodape">
+    <h2>&copyCanta Sertão</h2>
+    <h2>Todos os direitos reservados</h2>
+    <ul>
+      <li><a href=""><img src="/img/WhatsApp.png" alt=""></a></li>
+      <li><a href=""><img src="/img/msg.png" alt=""></a></li>
+      <li><a href=""><img src="/img/Instagram (2).png" alt=""></a></li>
+      <li><a href=""><img src="/img/Facebook (1).png" alt=""></a></li>
+    </ul>
+    </footer>
 </body>
 </html>
