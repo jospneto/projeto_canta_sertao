@@ -45,7 +45,7 @@
         <div id="logo">
             <img src="/img/Logo.png">
         </div>
-        <a href="./logout.php"><button type="button" class="btn btn-warning btn-lg text-light">Sair</button></a>
+        <a href="../../logout.php"><button type="button" class="btn btn-warning btn-lg text-light">Sair</button></a>
     </div> 
     <section id="body">
     <div class="perfil">
@@ -74,7 +74,6 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="edicaoPerfil.php">Editar Dados</a>
                     <a class="dropdown-item" href="edicaoMidias.php">Editar/Adicionar mídias sociais</a>
-                    <a class="dropdown-item" href="#">Deletar</a>
                 </div>
             </div>
             </div>
@@ -89,15 +88,8 @@
         </div>
     </div>
     </section>
-    <footer class="rodape">
-    <h2>&copyCanta Sertão</h2>
-    <h2>Todos os direitos reservados</h2>
-    <ul>
-      <li><a href=""><img src="/img/WhatsApp.png" alt=""></a></li>
-      <li><a href=""><img src="/img/msg.png" alt=""></a></li>
-      <li><a href=""><img src="/img/Instagram (2).png" alt=""></a></li>
-      <li><a href=""><img src="/img/Facebook (1).png" alt=""></a></li>
-    </ul>
-    </footer>
+    <?php
+        require_once "../../rodape.php"
+    ?>
 </body>
 </html>
