@@ -20,7 +20,7 @@
   <body class="text-center" class="conteudo">
         <img class="mb-5 col-4" src="/img/Logo.png" alt="">
         <form class="form-signin" method="POST" action="cadAction.php">
-        <h1 class="h3 mb-3 font-weight-normal text-light">Faça seu cadastro</h1>
+        <h1 class="h3 mb-3 font-weight-large text-light">Faça seu cadastro</h1>
         <?php 
             if(isset($_SESSION['msg'])){
               echo $_SESSION['msg'];
