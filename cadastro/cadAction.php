@@ -17,7 +17,7 @@
 
         if(mysqli_query($conexao, $sql_code)){
             $_SESSION['msg'] = "Usuário cadastrado com sucesso!";
-            header("Location: cadastroArtista.php");
+            header("Location: ../login/painel/painelMusico.php");
         }else{
             $_SESSION['msg'] = "Erro".mysqli_connect_error($conexao);
         }

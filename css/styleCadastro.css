@@ -19,7 +19,21 @@ body{
 
 #campos *{
     margin: 10px;
-    padding: 10px;
+}
+
+#termos_uso {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+#termos_uso a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+#termos_uso a:hover{
+    color: #E73A59;
 }
 
 .rodape a:link{

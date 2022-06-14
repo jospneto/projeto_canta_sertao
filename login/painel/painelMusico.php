@@ -45,7 +45,7 @@
         <div id="logo">
             <img src="/img/Logo.png">
         </div>
-        <a href="../../logout.php"><button type="button" class="btn btn-warning btn-lg text-light">Sair</button></a>
+        <a href="/login/logout.php"><button type="button" class="btn btn-warning btn-lg text-light">Sair</button></a>
     </div> 
     <section id="body">
     <div class="perfil">
