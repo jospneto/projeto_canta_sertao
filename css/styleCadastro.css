@@ -18,13 +18,13 @@ body{
 }
 
 #campos *{
-    margin: 10px;
+    margin: 6px;
 }
 
 #termos_uso {
     display: flex;
     flex-direction: row;
-    text-align: center;
+    text-align: left;
 }
 
 #termos_uso a{

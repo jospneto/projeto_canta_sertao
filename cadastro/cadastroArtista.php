@@ -47,7 +47,7 @@
           <div id="termos_uso">
             <input type="checkbox" name="termos" class="form-control">
             <h6 class="text-break fs-6 text-light">Li aceito os termos de uso da plataforma</h6>
-            <h6 class="text-break fs-6 text-light"><a href="../login/login.php">Já possui cadastro?Realize o login</a></h6>
+            <h6 class="text-break fs-6 text-light"><a href="../login/login.php">Já possui cadastro? Realize o login</a></h6>
           </div>
           <button class="btn btn-lg btn-danger btn-block" type="submit">Cadastrar</button>
         </section>
