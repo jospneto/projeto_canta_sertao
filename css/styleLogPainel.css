@@ -1,3 +1,18 @@
 body{
    background-image: linear-gradient(#E73A59, #FBBB01);
 }
+
+#campos input{
+    margin: 10px;
+}
+
+#campos button{
+    margin: 10px;
+}
+
+#campos img{
+    background-color: aliceblue;
+    height: 150px;
+    padding: 10px;
+    border-radius: 8px;
+}
