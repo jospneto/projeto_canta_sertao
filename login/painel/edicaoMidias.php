@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/signin.css">
     <link rel="stylesheet" href="/css/styleEdicao.css">
     <title>Editor de midias</title>
 </head>
 <body>
-    <form id="form">
-    <h2>Adicione ou edite seus contatos/mídias sociais</h2>
-    <div class="form-row">
+    <form id="form" class="border border-light">
+    <h2 class="text-light">Adicione ou edite seus contatos/mídias sociais</h2>
+    <div class="form-row text-light">
         <div class="form-group col-md-6">
         <label for="inputEmail4">Instagram</label>
         <input type="email" class="form-control" id="inputEmail4" placeholder="@fulano">
@@ -21,11 +22,11 @@
         <input type="password" class="form-control" id="inputPassword4" placeholder="link ou nome de usuário">
         </div>
     </div>
-    <div class="form-group">
+    <div class="form-group text-light">
         <label for="inputAddress">YouTube</label>
         <input type="text" class="form-control" id="inputAddress" placeholder="Canal no YouTube">
     </div>
-    <div class="form-group">
+    <div class="form-group text-light">
         <label for="inputAddress">Outras</label>
         <input type="text" class="form-control" id="inputAddress" placeholder="Outro veículo utilizado por você">
     </div>

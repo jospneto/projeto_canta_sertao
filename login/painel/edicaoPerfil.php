@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/signin.css">
     <link rel="stylesheet" href="/css/styleEdicao.css">
     <title>Editor de midias</title>
 </head>
 <body>
-    <form id="form">
-    <h2>Edite seus dados</h2>
-    <div class="form-row">
+    <form id="form" class="border border-light">
+    <h2 class="text-light">Edite seus dados</h2>
+    <div class="form-row text-light">
         <div class="form-group col-md-6">
         <label for="inputEmail4">Email</label>
         <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
@@ -21,19 +22,19 @@
         <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
         </div>
     </div>
-    <div class="form-group">
+    <div class="form-group text-light">
         <label for="inputAddress">Endereço</label>
         <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
     </div>
-    <div class="form-group">
+    <div class="form-group text-light">
         <label for="inputAddress2">Nome fantasia</label>
         <input type="text" class="form-control" id="inputAddress2" placeholder="Nome do cantor ou da banda">
     </div>
-    <div class="form-group">
+    <div class="form-group text-light">
         <label for="inputAddress2">Genêro músical</label>
         <input type="text" class="form-control" id="inputAddress2" placeholder="Genêro musical do músico">
     </div>
-    <div class="form-group">
+    <div class="form-group text-light">
         <label for="inputAddress2">Cachê</label>
         <input type="number" class="form-control" id="inputAddress2" placeholder="Valor cobrado por show/evento participado">
     </div>
