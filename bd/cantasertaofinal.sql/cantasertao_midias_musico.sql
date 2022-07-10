@@ -23,12 +23,14 @@ DROP TABLE IF EXISTS `midias_musico`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8*/;
 CREATE TABLE `midias_musico` (
-  `cpf_musico` bigint NOT NULL,
-  `link_midia` varchar(35) NOT NULL,
-  `name_user` varchar(35) DEFAULT NULL,
-  PRIMARY KEY (`link_midia`),
-  KEY `fk_cpf_musico_midia` (`cpf_musico`),
-  CONSTRAINT `fk_cpf_musico_midia` FOREIGN KEY (`cpf_musico`) REFERENCES `user_musico` (`cpf_cnpj`)
+  `idMidias` int NOT NULL AUTO_INCREMENT,
+  `cpf_cnpj` bigint NOT NULL,
+  `instagram` varchar(255),
+  `spotify` varchar(255),
+  `youtube` varchar(255),
+  `outros` varchar(255),
+  PRIMARY KEY (`idMidias`),
+  FOREIGN KEY (`cpf_cnpj`) REFERENCES `user_musico` (`cpf_cnpj`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

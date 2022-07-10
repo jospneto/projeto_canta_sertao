@@ -33,6 +33,7 @@ body{
 #body{
     display: flex;
     justify-self:auto;
+    min-height: 100%;
 }
 
 .perfil{

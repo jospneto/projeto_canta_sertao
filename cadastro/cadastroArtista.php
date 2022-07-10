@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/img/Logo.png">
-    <link rel="stylesheet" href="/css/styleCadastro.css">
+    <link rel="icon" href="../img/Logo.png">
+    <link rel="stylesheet" href="../css/styleCadastro.css">
     <title>Cadastro</title>
 
     <!-- Principal CSS do Bootstrap -->
-    <link href="\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Estilos customizados para esse template -->
-    <link href="/css/signin.css" rel="stylesheet">
+    <link href="../css/signin.css" rel="stylesheet">
   </head>
 
   <body class="text-center" class="conteudo">
-        <img class="mb-5 col-4" src="/img/Logo.png" alt="">
+        <img class="mb-5 col-4" src="../img/Logo.png" alt="">
         <form class="form-signin" method="POST" action="cadAction.php">
         <h1 class="h2 mb-3 font-weight-large text-light">Faça seu cadastro</h1>
         <?php 

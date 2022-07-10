@@ -1,47 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/signin.css">
-    <link rel="stylesheet" href="/css/styleEdicao.css">
-    <title>Editor de midias</title>
-</head>
-<body>
-    <form id="form" class="border border-light">
-    <h2 class="text-light">Edite seus dados</h2>
-    <div class="form-row text-light">
-        <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-        </div>
-        <div class="form-group col-md-6">
-        <label for="inputPassword4">Senha</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
-        </div>
-    </div>
-    <div class="form-group text-light">
-        <label for="inputAddress">Endereço</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
-    </div>
-    <div class="form-group text-light">
-        <label for="inputAddress2">Nome fantasia</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Nome do cantor ou da banda">
-    </div>
-    <div class="form-group text-light">
-        <label for="inputAddress2">Genêro músical</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Genêro musical do músico">
-    </div>
-    <div class="form-group text-light">
-        <label for="inputAddress2">Cachê</label>
-        <input type="number" class="form-control" id="inputAddress2" placeholder="Valor cobrado por show/evento participado">
-    </div>
-    <div id="buttons">
-        <button type="submit" class="btn btn-danger btn-lg">Alterar</button>
-        <a href="painelMusico.php"><button type="button" class="btn btn-danger btn-lg">Voltar</button></a>
-    </div>
-    </form>
-</body>
-</html>
+<?php
+
+include('../conexao.php');
+
+session_start();
+
+if (!($_SESSION['cpf_cnpj'] && $_SESSION['nome_fantasia'])){
+    session_destroy();
+    header("location: ../logout.php");
+    exit;
+ }
+
+$cpf_cnpj = $_SESSION["cpf_cnpj"];
+
+$sql_code = "SELECT * FROM user_musico WHERE cpf_cnpj = '$cpf_cnpj'";
+$sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
+
+$usuario = $sql_query->fetch_assoc();
+$vazio = "";
+
+if (isset($_POST['email'], $_POST['endereco'], $_POST['telefone'], $_POST['nome_fantasia'], $_POST['genero_musical'], $_POST['cache_show'],)) {
+
+    if ($_POST['email'] && $_POST['endereco'] && $_POST['telefone'] && $_POST['nome_fantasia'] && $_POST['genero_musical'] && $_POST['cache_show']) {
+
+        $nome_fantasia = trim($_POST['nome_fantasia']);
+        $email = trim($_POST['email']);
+        $telefone = trim($_POST['telefone']);
+        $genero_musical = trim($_POST['genero_musical']);
+        $cache_show = trim($_POST['cache_show']);
+        $endereco = $_POST['endereco'];
+
+        $sql_code = "";
+
+        if (isset($_POST['senha']) && $_POST['senha']) {
+
+            $senha = md5($_POST['senha']);
+
+            $sql_code = "UPDATE user_musico 
+        SET nome_fantasia = '$nome_fantasia', email = '$email', endereco = '$endereco', telefone = '$telefone', 
+        genero_musical = '$genero_musical', cache_show = " . $cache_show . ", senha = '$senha'
+        WHERE cpf_cnpj = " . $cpf_cnpj;
+        } else {
+
+            $sql_code = "UPDATE user_musico 
+        SET nome_fantasia = '$nome_fantasia', email = '$email', endereco = '$endereco', telefone = '$telefone', 
+        genero_musical = '$genero_musical', cache_show = " . $cache_show . "
+        WHERE cpf_cnpj = " . $cpf_cnpj;
+        }
+
+        $_SESSION['nome_fantasia'] = $nome_fantasia;
+
+        $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
+
+        //header("Refresh:0");
+
+        if ($sql_query)
+            header("location: ./edicaoPerfil.php?status=success");
+        else
+            header("location: ./edicaoPerfil.php?status=error");
+
+        exit;
+    } else {
+
+        $campos = ["email", "endereco", "telefone", "nome_fantasia", "genero_musical", "cache_show"];
+
+        foreach ($campos as $campo){
+
+            if(!$_POST[$campo]){
+                $vazio = $campo;
+                break;
+            }
+
+        }
+
+        
+
+        //header("location: ./edicaoPerfil.php?status=warning");
+    }
+}
+
+include './formEditaPerfil.php';

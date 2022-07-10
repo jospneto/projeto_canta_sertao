@@ -26,7 +26,9 @@ CREATE TABLE `imagens_musico` (
   `idImagem` int NOT NULL AUTO_INCREMENT,
   `iMg` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `data_entrada` date DEFAULT NULL,
-  PRIMARY KEY (`idImagem`)
+  `cpf_cnpj` bigint(20) NOT NULL,
+  PRIMARY KEY (`idImagem`),
+   FOREIGN KEY (`cpf_cnpj`) REFERENCES `user_musico`(`cpf_cnpj`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -36,7 +38,7 @@ CREATE TABLE `imagens_musico` (
 
 LOCK TABLES `imagens_musico` WRITE;
 /*!40000 ALTER TABLE `imagens_musico` DISABLE KEYS */;
-INSERT INTO `imagens_musico` VALUES (1,'78bd39a3d9fa29e82ea06a05639a0dbd.jpg','2022-02-21'),(2,'7964c3d74c187dd2a122e453016e5b8c.jpg','2022-02-21'),(3,'4bb0585f8cc813813c0d6ce70e49e537.','2022-03-06'),(4,'fd5e30b857580a5059e3d767dd1ba2bb.','2022-03-06'),(5,'21044992796aefae583b828558bbfdf4.jpeg','2022-03-06'),(6,'fdba971705f9520d7baf9e317b7cf5ea.jpeg','2022-03-06'),(7,'7739d3d5b554ae9a03263325cf5eb9ec.jpeg','2022-03-06'),(8,'88d2a7ad86204177a7df5c40258c460f.jpeg','2022-03-06'),(9,'6baf176540a9f442dea0e2b790120b93.jpeg','2022-03-06'),(10,'b52331d8b301546029e0ce7661410f9a.jpeg','2022-03-07');
+/* INSERT INTO `imagens_musico` VALUES (1,'78bd39a3d9fa29e82ea06a05639a0dbd.jpg','2022-02-21'),(2,'7964c3d74c187dd2a122e453016e5b8c.jpg','2022-02-21'),(3,'4bb0585f8cc813813c0d6ce70e49e537.','2022-03-06'),(4,'fd5e30b857580a5059e3d767dd1ba2bb.','2022-03-06'),(5,'21044992796aefae583b828558bbfdf4.jpeg','2022-03-06'),(6,'fdba971705f9520d7baf9e317b7cf5ea.jpeg','2022-03-06'),(7,'7739d3d5b554ae9a03263325cf5eb9ec.jpeg','2022-03-06'),(8,'88d2a7ad86204177a7df5c40258c460f.jpeg','2022-03-06'),(9,'6baf176540a9f442dea0e2b790120b93.jpeg','2022-03-06'),(10,'b52331d8b301546029e0ce7661410f9a.jpeg','2022-03-07'); */;
 /*!40000 ALTER TABLE `imagens_musico` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

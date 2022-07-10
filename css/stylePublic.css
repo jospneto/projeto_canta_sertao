@@ -1,26 +1,27 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
-    display: grid;
-    width: 1366px;
+    /* display: grid; */
+    /*  width: 1366px; */
+    width: 100%;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 120px 1fr 80px;
-    grid-template-areas: "perfil" "mural" "rodape";
+    grid-template-areas: "perfil""mural""rodape";
     background-color: #E73A59;
 }
 
-#perfilUser{
+#perfilUser {
     display: flex;
     flex-direction: row;
 }
 
-#logo{
-    width: 55%;
+#logo {
+    /* width: 55%; */
     border-radius: 5px;
     background-image: linear-gradient(#FBBB01, aliceblue);
 }
@@ -31,47 +32,52 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 70%;
     height: 700px;
     background-image: linear-gradient(#FBBB01, #E73A59);
     color: aliceblue;
     text-shadow: black 0.1rem 0.1rem 0.2rem;
 }
 
-.perfil button{
+.perfil button {
     text-shadow: black 0.1rem 0.1rem 0.2rem;
 }
 
-@keyframes anim-public{
+@keyframes anim-public {
     0% {
         background-image: url('../img/bgImagens/bgImage.jpg');
     }
+
     25% {
         background-image: url('../img/bgImagens/bgImage2.jpg');
     }
+
     50% {
         background-image: url('../img/bgImagens/bgImage3.jpg');
     }
+
     75% {
         background-image: url('../img/bgImagens/bgImage4.jpg');
     }
+
     100% {
         background-image: url('../img/bgImagens/bgImage5.jpg');
     }
 }
 
-.mural{
+.mural {
+
     animation: anim-public 30s linear infinite;
 }
 
-#imgUser{
+#imgUser {
     width: 150px;
     padding: 35px;
     background-color: aliceblue;
     border-radius: 50%;
 }
 
-.midias{
+.midias {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -79,33 +85,38 @@ body{
     width: 50%;
 }
 
-.mural{
+.mural {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 1366px;
-    height: 800px;
+    /* height: 800px; */
+    height: 100%;
     color: aliceblue;
     text-shadow: black 0.1rem 0.1rem 0.2rem;
 }
 
-#sobre{
+#sobre {
     background-image: linear-gradient(#FBBB01, #E73A59);
-    width: 50%;
-    height: 35%;
+    width: 60%;
+    /* height: 35%; */
+    min-height: 200px;
+    border-radius: 8px;
+    overflow-y: scroll;
+
+}
+
+
+#trabalhos {
+    background-image: linear-gradient(#FBBB01, #E73A59);
+    width: 60%;
+    /* height: 35%; */
+    min-height: 200px;
     border-radius: 8px;
     overflow-y: scroll;
 }
 
-#trabalhos{
-    background-image: linear-gradient(#FBBB01, #E73A59);
-    width: 50%;
-    height: 35%;
-    border-radius: 8px;
-    overflow-y: scroll;
-}
-
-.rodape{
+.rodape {
     grid-area: "rodape";
     background-image: linear-gradient(#FBBB01, #E73A59);
     position: absolute;
@@ -121,14 +132,14 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
-.rodape ul li{
+.rodape ul li {
     display: inline;
     justify-content: center;
     flex-direction: row;
     align-items: center;
 }
 
-.rodape ul li a{
+.rodape ul li a {
     padding: 0px;
     text-decoration: none;
 }

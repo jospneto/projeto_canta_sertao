@@ -31,6 +31,7 @@ CREATE TABLE `user_musico` (
   `genero_musical` varchar(35) NOT NULL,
   `data_entrada` date NOT NULL,
   `cache_show` float NOT NULL,
+  `ativo` ENUM('s','n'),
   `senha` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`cpf_cnpj`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -42,7 +43,12 @@ CREATE TABLE `user_musico` (
 
 LOCK TABLES `user_musico` WRITE;
 /*!40000 ALTER TABLE `user_musico` DISABLE KEYS */;
-INSERT INTO `user_musico` VALUES (82,'jospRock','joseneto@gmail.com','s/n Sítio Riacho do Meio','7845266','','2022-02-16',1,'124'),(74589,'pi','pi@gmail.com','salgueiro','879455122','forró','2022-02-21',1256,'123'),(7485656,'aza','aza@gmail.com','salgueiro','451236','Rock Roll','2022-02-16',126,'5264'),(658784521,'Tartarugas','tartarugas@gmail.com','Terra de Oz','78456233','Rock','2022-02-16',125,'456'),(70866882405,'ForróSI','josenetopereira380@gmail.com','Salgueiro-PE','99392054','forró','2022-02-03',1500,'1234');
+INSERT INTO `user_musico` VALUES 
+(82,'jospRock','joseneto@gmail.com','s/n Sítio Riacho do Meio','7845266','','2022-02-16',1,'s','124'),
+(74589,'pi','pi@gmail.com','salgueiro','879455122','forró','2022-02-21',1256,'s','123'),
+(7485656,'aza','aza@gmail.com','salgueiro','451236','Rock Roll','2022-02-16',126,'s','5264'),
+(658784521,'Tartarugas','tartarugas@gmail.com','Terra de Oz','78456233','Rock','2022-02-16',125,'s','456'),
+(70866882405,'ForróSI','josenetopereira380@gmail.com','Salgueiro-PE','99392054','forró','2022-02-03',1500,'s','1234');
 /*!40000 ALTER TABLE `user_musico` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

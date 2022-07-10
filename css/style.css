@@ -263,6 +263,7 @@ body{
     background-image: linear-gradient(#F21905, #E73A59);
 }
 
+
 .avaliacoes div{
     display: flex;
     align-items: center;
@@ -305,3 +306,5 @@ body{
     padding: 0px;
     text-decoration: none;
 }
+
+
