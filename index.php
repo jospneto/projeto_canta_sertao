@@ -45,7 +45,7 @@ while ($row = mysqli_fetch_array($sql_query)) {
         <p >
           <strong>Gênero musical:</strong> ' . $row['genero_musical'] . ' |
            <strong>Endereço:</strong> ' . $row['endereco'] . ' |
-           <strong>Cachê:</strong> ' . $row['cache_show'] . '
+           <strong>Cachê: R$</strong> ' . $row['cache_show'] . '
         </p>
       </div>
       <h3>Média de aprovação: ' . ($media == 0 ? 'Ainda não a avaliações' :  number_format($media, 2, '.', '')) . '</h3>
@@ -87,7 +87,7 @@ while ($row = mysqli_fetch_array($sql_query)) {
       color: #F2B705;
       text-shadow: rgba(0, 0, 0, 0.5) 0 3px 2.5px;
       font-size: 1.5rem;
-      background-image: linear-gradient(#F21905, #E73A59);
+      background-image: linear-gradient(#E73A59, #F21905,  #333);
     }
 
     .ava {
@@ -111,8 +111,7 @@ while ($row = mysqli_fetch_array($sql_query)) {
 
       overflow: hidden;
       width: 250px;
-      filter: drop-shadow(3px 3px 3px rgba(245, 189, 5, 0.493));
-
+      filter: drop-shadow(3px 2px 1px, #000);
     }
 
     .noEstrela {
@@ -186,53 +185,7 @@ while ($row = mysqli_fetch_array($sql_query)) {
         <li>Pop</li>
         <li>Sertanejo</li>
       </ul>
-    </section>
-    <h1>ARTISTAS RECEM CADASTRADOS</h1>
-    <ul>
-      <li><img src="./img/artistas/img1.png" alt="">
-        <h3>Artista1</h3>
-      </li>
-      <li><img src="./img/artistas/img2.png" alt="">
-        <h3>Artista1</h3>
-      </li>
-      <li><img src="./img/artistas/img3.png" alt="">
-        <h3>Artista1</h3>
-      </li>
-      <li><img src="./img/artistas/img4.png" alt="">
-        <h3>Artista1</h3>
-      </li>
-    </ul>
-    <ul>
-      <li><img src="./img/artistas/img1.png" alt="">
-        <h3>Artista1</h3>
-      </li>
-      <li><img src="./img/artistas/img2.png" alt="">
-        <h3>Artista1</h3>
-      </li>
-      <li><img src="./img/artistas/img3.png" alt="">
-        <h3>Artista1</h3>
-      </li>
-      <li><img src="./img/artistas/img4.png" alt="">
-        <h3>Artista1</h3>
-      </li>
-    </ul>
-    <ul>
-      <li><img src="./img/artistas/img1.png" alt="">
-        <h3>Artista1</h3>
-      </li>
-      <li><img src="./img/artistas/img2.png" alt="">
-        <h3>Artista1</h3>
-      </li>
-      <li><img src="./img/artistas/img3.png" alt="">
-        <h3>Artista1</h3>
-      </li>
-      <li><img src="./img/artistas/img4.png" alt="">
-        <h3>Artista1</h3>
-      </li>
-    </ul>
   </section>
-
-
   <section class="avaliacoesSection">
 
     <h1>AVALIE NOSSOS MÚSICOS</h1>

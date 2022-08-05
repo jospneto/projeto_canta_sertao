@@ -33,11 +33,31 @@ if (isset($_GET['musico'])) {
 
     $musico = $sql_query->fetch_assoc();
 
-    if($musico['ativo']=="n"){
+    if ($musico['ativo'] == "n") {
         echo "<h1> Error 404 </h1>";
         exit;
     }
 
+    //Obtem mídias
+    $sql_codeMidias = "SELECT * FROM midias_musico WHERE cpf_cnpj = $cpf_cnpj";
+    $sql_queryMidias = $conexao->query($sql_codeMidias) or die("Falha na execução do código SQL: " . $conexao->error);
+
+    $midias = $sql_queryMidias->fetch_assoc();
+
+    $midiasView = "";
+
+    if ($midias) {
+        $midiasView = '
+        <ul class="midias d-flex align-items-center">
+                <li><a href=" ' . $midias['youtube'] . '" target="_blank" ><img src="../img/YouTube.png" height="40"  alt=""></a></li>
+                <li><a href=" ' . $midias['spotify'] . '" target="_blank" ><img src="../img/Spotify.png" height="40" alt=""></a></li>
+                <li><a href=" ' . $midias['instagram'] . '" target="_blank" ><img src="../img/Instagram (2).png" height="30"  alt=""></a></li>
+                <li><a href="' . $midias['outros'] . '" target="_blank" > <img src="../img/businessman 1.png" height="30" alt=""></a></li>
+        </ul>
+        ';
+    }
+
+    //Obtem imagem
     $sql_code = "SELECT * FROM imagens_musico WHERE cpf_cnpj = '$cpf_cnpj'";
     $sql_queryImagens = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
 
@@ -255,7 +275,7 @@ if (isset($_GET['musico'])) {
             <!--  <div id="imgUser">
                 <img src="../img/music 1.png" alt="">
             </div> -->
-
+            
             <div style="margin: 0 auto;" class="mt-2">
                 <img src="<?= $imgUrl ?>" height="200" width="200" class="bg-light border border-warning rounded-circle" alt="...">
             </div>
@@ -272,13 +292,10 @@ if (isset($_GET['musico'])) {
                 ?>
             </h1>
 
-            <ul class="midias">
-                <li><a href=""><img src="../img/WhatsApp.png" alt=""></a></li>
-                <li><a href=""><img src="../img/msg.png" alt=""></a></li>
-                <li><a href=""><img src="../img/Instagram (2).png" alt=""></a></li>
-                <li><a href=""><img src="../img/Facebook (1).png" alt=""></a></li>
-            </ul>
+            <?=$midiasView?>
+
             <a href="../index.php"><button type="button" class="btn btn-warning btn-lg text-light">Voltar</button></a>
+
         </div>
         <div class="mural">
 

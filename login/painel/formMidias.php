@@ -36,28 +36,35 @@ if (isset($_GET['status'])) {
         <?= $mensagem ?>
 
         <h2 class="text-light">Adicione ou edite seus contatos/mídias sociais</h2>
+
         <div class="form-row text-light">
             <div class="form-group col-md-6">
-                <label for="inputEmail4">Instagram</label>
-                <input type="text" class="form-control" value="<?= $midias ? $midias['instagram'] : '' ?>" name="instagram" placeholder="@fulano">
+                <label >Instagram</label>
+                <input type="url" class="form-control" value="<?= $midias ? $midias['instagram'] : '' ?>" name="instagram" placeholder="https://www.instagram.com/fulano/">
             </div>
+
             <div class="form-group col-md-6">
-                <label for="inputPassword4">Spotify</label>
-                <input type="text" class="form-control" value="<?= $midias ? $midias['spotify'] : '' ?>" name="spotify" placeholder="link ou nome de usuário">
+                <label >Spotify</label>
+                <input type="url" class="form-control" value="<?= $midias ? $midias['spotify'] : '' ?>" name="spotify" placeholder="https://open.spotify.com/artist/codespotify">
             </div>
+            
         </div>
+
         <div class="form-group text-light">
-            <label for="inputAddress">YouTube</label>
-            <input type="text" class="form-control" value="<?= $midias ? $midias['youtube'] : '' ?>" name="youtube" placeholder="Canal no YouTube">
+            <label>YouTube</label>
+            <input type="url" class="form-control" value="<?= $midias ? $midias['youtube'] : '' ?>" name="youtube" placeholder="https://www.youtube.com/channel/codecanal">
         </div>
+
         <div class="form-group text-light">
-            <label for="inputAddress">Outras</label>
-            <input type="text" class="form-control" value="<?= $midias ? $midias['outros'] : '' ?>" name="outros" placeholder="Outro veículo utilizado por você">
+            <label >Outras</label>
+            <input type="url" class="form-control" value="<?= $midias ? $midias['outros'] : '' ?>" name="outros" placeholder="https://www.exemplo.com/fulano">
         </div>
+
         <div id="buttons">
             <button type="submit" class="btn btn-danger btn-lg">Salvar</button>
             <a href="painelMusico.php"><button type="button" class="btn btn-danger btn-lg">Voltar</button></a>
         </div>
+
     </form>
 </body>
 
