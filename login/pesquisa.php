@@ -66,6 +66,7 @@ if (isset($_POST['pesquisa'])) {
     <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleRodapePublic.css">
     <title>Pesquisar músicos</title>
 
     <style>
@@ -74,31 +75,30 @@ if (isset($_POST['pesquisa'])) {
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
+            overflow: hidden;
             min-height: 100%;
+        }
+
+        #results{
+            background-image: linear-gradient(#E87301, #D31303, #7F0200);
         }
     </style>
 
 </head>
-
 <body>
-
     <div class="container m-5 ">
         <form class="form-inline my-2 my-lg-0" method="POST">
             <input class="form-control mr-sm-2" type="search" name="pesquisa" placeholder="Pesquisar" aria-label="Pesquisar">
             <button class="btn btn-danger my-2 my-sm-0" type="submit">Pesquisar</button>
         </form>
         <div>
-
-            <div class="d-flex flex-row justify-content-center flex-wrap mt-1 mb-5 bg-warning bg-gradient">
-
+            <div id="results" class="d-flex flex-row align-items-center justify-content-center flex-wrap mt-1 mb-5 bg-warning shadow p-3 mb-5 bg-white rounded">
                 <?= $resultados ?>
-
             </div>
-
         </div>
     </div>
-
-
+    <?php
+        require_once "../rodape.php"
+    ?>
 </body>
-
 </html>

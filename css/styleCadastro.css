@@ -45,7 +45,7 @@ body{
     grid-area: "rodape";
     background-color: #E73A59;
     position: absolute;
-    height: 80px;
+    height: 70px;
     width: 100%;
     bottom: 0px;
     display: flex;

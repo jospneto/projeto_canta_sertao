@@ -111,7 +111,7 @@ while ($row = mysqli_fetch_array($sql_query)) {
 
       overflow: hidden;
       width: 250px;
-      filter: drop-shadow(3px 2px 1px, #000);
+      filter: drop-shadow(3px 2px 2px, #333);
     }
 
     .noEstrela {

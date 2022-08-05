@@ -116,12 +116,11 @@ body {
     overflow-y: scroll;
 }
 
-.rodape {
+.rodape{
     grid-area: "rodape";
-    background-image: linear-gradient(#FBBB01, #E73A59);
-    position: absolute;
-    height: 80px;
-    width: 100%;
+    background-image: linear-gradient(#FBBB01, #E73A59);;
+    position: sticky;
+    height: 60px;
     bottom: 0px;
     display: flex;
     justify-content: space-around;
@@ -132,14 +131,14 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.rodape ul li {
+.rodape ul li{
     display: inline;
     justify-content: center;
     flex-direction: row;
     align-items: center;
 }
 
-.rodape ul li a {
+.rodape ul li a{
     padding: 0px;
     text-decoration: none;
 }

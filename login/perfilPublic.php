@@ -163,9 +163,7 @@ if (isset($_GET['musico'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.11.0/build/cssnormalize/cssnormalize-min.css">
     <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
-
     <link rel="stylesheet" href="../css//stylePublic.css">
-
     <title>Painel</title>
 
     <style id="compiled-css" type="text/css">
@@ -310,14 +308,6 @@ if (isset($_GET['musico'])) {
                 <h4>Cachê: <?= $musico['cache_show'] ?></h4>
 
             </div>
-
-
-            <div id="trabalhos" class="p-2 mb-3">
-                <h2 id="avaliacoesTitle">Nossos trabalhos</h2>
-                <h4> Ainda não a trabalhos</h4>
-            </div>
-
-
             <div id="trabalhos" class="p-2 mb-5">
 
                 <h2 id="avaliacoesTitle">Avalie <?= $musico['nome_fantasia'] ?></h2>
@@ -372,7 +362,7 @@ if (isset($_GET['musico'])) {
 
     </section>
     <?php
-    //require_once "../rodape.php"
+    require_once "../rodape.php"
     ?>
 </body>
 
