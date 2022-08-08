@@ -26,7 +26,7 @@ if (isset($_GET['status'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../../css/signin.css">
-    <link rel="stylesheet" href="../../css/styleEdicao.css">
+    <link rel="stylesheet" href="../../css/styleMidias.css">
     <title>Editor de midias</title>
 </head>
 

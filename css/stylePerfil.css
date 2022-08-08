@@ -39,8 +39,10 @@ body{
 .perfil{
     grid-area: "perfil";
     width: 100%;
+    height: 600px;
     display: flex;
     align-items: center;
+    padding: 20px;
     justify-content:space-around;
     flex-direction: column;
     color: antiquewhite;

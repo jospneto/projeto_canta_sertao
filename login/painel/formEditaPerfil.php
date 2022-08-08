@@ -38,7 +38,7 @@ if (isset($_GET['status'])) {
 
         <?= $mensagem ?>
 
-        <h2 class="text-light">Edite seus dados</h2>
+        <h2 class="text-light text-center">Edite seus dados</h2>
 
         <div class="form-row text-light">
 
@@ -105,7 +105,5 @@ if (isset($_GET['status'])) {
         </div>
 
     </form>
-
 </body>
-
 </html>

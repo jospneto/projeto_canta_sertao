@@ -8,7 +8,7 @@ body{
     /*background-color:#E73A59;*/
     background-image: linear-gradient(#FBBB01, #E73A59);
     background-repeat: repeat;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 #form{

@@ -142,7 +142,7 @@ $con = mysqli_query($conexao, $sql_code) or die($conexao->erro);
 
             <h2 class="m-3">Bem vindo(a), <?php echo $_SESSION['nome_fantasia']; ?></h2>
 
-            <div class="buttons d-flex flex-column  align-items-center">
+            <div class="buttons d-flex flex-column align-items-center">
 
                 <div class="dropdown dropright text-muted">
                     <button class="btn btn-danger btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -18,9 +18,9 @@
   </head>
 
   <body class="text-center" class="conteudo">
-        <img class="mb-5 col-4" src="../img/Logo.png" alt="">
+        <img class="mb-4 col-5" src="../img/Logo.png" alt="">
         <form class="form-signin" method="POST" action="cadAction.php">
-        <h1 class="h2 mb-3 font-weight-large text-light">Faça seu cadastro</h1>
+        <h1 class="h2 font-weight-small text-light">Faça seu cadastro</h1>
         <?php 
             if(isset($_SESSION['msg'])){
               echo $_SESSION['msg'];
@@ -37,7 +37,27 @@
           <label for="inputText" class="sr-only">Endereço</label>
           <input type="text" name="endereco" id="inputText" class="form-control" placeholder="Endereço" required>
           <label for="inputText" class="sr-only">Genêro musical</label>
-          <input type="text" name="genero_musical" id="inputText" class="form-control" placeholder="Genêro musical" required>
+          <!-- <input type="checkbox" name="genero_musical" id="inputText" class="form-control" value="forró" placeholder="Genêro musical" required> -->
+          <div class="form-check text-left" id="generos">
+            <div>
+              <input class="form-check-input" type="checkbox" name="genero_musical" value="forró" id="flexCheckDefault"><h5>Forró</h5>
+            </div>
+            <div>
+              <input class="form-check-input" type="checkbox" name="genero_musical" value="rock" id="flexCheckDefault"><h5>Rock</h5>
+            </div>
+            <div>
+              <input class="form-check-input" type="checkbox" name="genero_musical" value="pop" id="flexCheckDefault"><h5>Pop</h5>
+            </div>
+            <div>
+              <input class="form-check-input" type="checkbox" name="genero_musical" value="sertanejo" id="flexCheckDefault"><h5>Sertanejo</h5>
+            </div>
+            <div>
+              <input class="form-check-input" type="checkbox" name="genero_musical" value="axé" id="flexCheckDefault"><h5>Axé</h5>
+            </div>
+            <div>
+              <input class="form-check-input" type="checkbox" name="genero_musical" value="pagode" id="flexCheckDefault"><h5>Pagode</h5>
+            </div>
+          </div>
           <label for="inputText" class="sr-only">Telefone</label>
           <input type="number" name="telefone" id="inputNumber" class="form-control" placeholder="Telefone" required>
           <label for="inputNumber" class="sr-only">Cachê do show</label>
@@ -46,14 +66,14 @@
           <input type="password" name="senha" id="inputPassword" class="form-control" placeholder="Senha" required>
           <div id="termos_uso">
             <input type="checkbox" name="termos" class="form-control">
-            <h6 class="text-break fs-6 text-light">Li aceito os termos de uso da plataforma</h6>
-            <h6 class="text-break fs-6 text-light"><a href="../login/login.php">Já possui cadastro? Realize o login</a></h6>
+            <h6 class="text-break text-light">Li aceito os termos de uso da plataforma</h6>
+            <h6 class="text-break text-light"><a href="../login/login.php">Já possui cadastro? Realize o login</a></h6>
           </div>
           <button class="btn btn-lg btn-danger btn-block" type="submit">Cadastrar</button>
         </section>
         </form>
         <?php
-          require_once "../rodape.php"
+          //require_once "../rodape.php"
         ?>
   </body>
 </html>

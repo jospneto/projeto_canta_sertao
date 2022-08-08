@@ -164,7 +164,6 @@ while ($row = mysqli_fetch_array($sql_query)) {
     <div class="conteudo">
       <ul class="listaPesquisa">
         <h2>Procure artistas para seu <br> evento de forma rápida e simples</h2>
-
         <form class="pesquisa" method="POST">
           <img src="./img/Search.png" height="35" width="35" alt="">
           <input type="text" name="pesquisa" placeholder="Pesquisar músicos">
