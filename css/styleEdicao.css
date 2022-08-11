@@ -1,19 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
+    height: 100vh;
     display: grid;
-    justify-content: center;
-    height: 110vh;
     align-items: center;
-    /*background-color:#E73A59;*/
-    background-image: linear-gradient(#FBBB01, #E73A59);
+    justify-content: center;
+    background-image: linear-gradient(to top, #FBBB01, #E73A59);
+    background-size: cover;
     background-repeat: repeat;
-    overflow-y: scroll;
+    overflow: hidden;
+}
+
+.formSection{
+    top: 0;
+    width: 700px;
 }
 
 #form{
     padding: 10px;
     border-radius: 8px;
+    height: fit-content;
     flex-wrap: wrap;
     background-color: #FBBB01;
     text-align: left;
@@ -25,5 +35,6 @@ body{
 
 #buttons{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }

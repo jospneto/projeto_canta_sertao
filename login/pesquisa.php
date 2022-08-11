@@ -71,7 +71,7 @@ if (isset($_POST['pesquisa'])) {
 
     <style>
         body {
-            background-image: linear-gradient(#F2B705, #F21905);
+            background-image: linear-gradient(#F2B705, #E73A59);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -80,7 +80,7 @@ if (isset($_POST['pesquisa'])) {
         }
 
         #results{
-            background-image: linear-gradient(#E87301, #D31303, #7F0200);
+            background-image: linear-gradient(#E73A59, #F2B705);
         }
     </style>
 

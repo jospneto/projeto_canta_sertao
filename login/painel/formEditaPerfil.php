@@ -33,77 +33,78 @@ if (isset($_GET['status'])) {
 </head>
 
 <body>
+    <section class="formSection">
+        <form id="form" method="POST" class="border border-light">
 
-    <form id="form" method="POST" class="border border-light">
+            <?= $mensagem ?>
 
-        <?= $mensagem ?>
+            <h2 class="text-light text-center">Edite seus dados</h2>
 
-        <h2 class="text-light text-center">Edite seus dados</h2>
+            <div class="form-row text-light">
 
-        <div class="form-row text-light">
+                <div class="form-group col-md-6">            
+                    <label for="inputEmail4">
+                        Email<span class="text-danger">*</span>
+                        <span class="text-danger"> <?= $vazio=="email"? "(Obrigatório)" : "" ?> </span>
+                    </label>
+                    <input type="email" class="form-control" value="<?= $usuario['email'] ?>" name="email" id="inputEmail4" placeholder="Email">
+                </div>
 
-            <div class="form-group col-md-6">            
-                <label for="inputEmail4">
-                    Email<span class="text-danger">*</span>
-                    <span class="text-danger"> <?= $vazio=="email"? "(Obrigatório)" : "" ?> </span>
-                </label>
-                <input type="email" class="form-control" value="<?= $usuario['email'] ?>" name="email" id="inputEmail4" placeholder="Email">
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">
+                        Senha<span class="text-danger">
+                    </label>
+                    <input type="password" class="form-control" name="senha" id="inputPassword4" placeholder="Senha">
+                </div>
+
             </div>
 
-            <div class="form-group col-md-6">
-                <label for="inputPassword4">
-                    Senha<span class="text-danger">
+            <div class="form-group text-light">
+                <label for="inputAddress">
+                    Endereço<span class="text-danger">*</span>
+                    <span class="text-danger"><?= $vazio=="endereco"? "(Obrigatório)" : "" ?></span>
                 </label>
-                <input type="password" class="form-control" name="senha" id="inputPassword4" placeholder="Senha">
+                <input type="text" class="form-control" value="<?= $usuario['endereco'] ?>" name="endereco" id="inputAddress" placeholder="Rua exemplo, nº 0">
             </div>
 
-        </div>
+            <div class="form-group text-light">
+                <label for="inputAddress2">
+                    Telefone<span class="text-danger">*</span>
+                    <span class="text-danger"><?= $vazio=="telefone"? "(Obrigatório)" : "" ?></span>
+                </label>
+                <input type="text" class="form-control" value="<?= $usuario['telefone'] ?>" name="telefone" id="telefone" placeholder="Telefone do cantor ou da banda">
+            </div>
 
-        <div class="form-group text-light">
-            <label for="inputAddress">
-                Endereço<span class="text-danger">*</span>
-                <span class="text-danger"><?= $vazio=="endereco"? "(Obrigatório)" : "" ?></span>
-            </label>
-            <input type="text" class="form-control" value="<?= $usuario['endereco'] ?>" name="endereco" id="inputAddress" placeholder="Rua exemplo, nº 0">
-        </div>
+            <div class="form-group text-light">
+                <label for="inputAddress2">
+                    Nome fantasia<span class="text-danger">*</span>
+                    <span class="text-danger"><?= $vazio=="nome_fantasia"? "(Obrigatório)" : "" ?></span>
+                </label>
+                <input type="text" class="form-control" value="<?= $usuario['nome_fantasia'] ?>" name="nome_fantasia" id="inputAddress2" placeholder="Nome do cantor ou da banda">
+            </div>
 
-        <div class="form-group text-light">
-            <label for="inputAddress2">
-                Telefone<span class="text-danger">*</span>
-                <span class="text-danger"><?= $vazio=="telefone"? "(Obrigatório)" : "" ?></span>
-            </label>
-            <input type="text" class="form-control" value="<?= $usuario['telefone'] ?>" name="telefone" id="telefone" placeholder="Telefone do cantor ou da banda">
-        </div>
+            <div class="form-group text-light">
+                <label for="inputAddress2">
+                    Genêro músical<span class="text-danger">*</span>
+                    <span class="text-danger"><?= $vazio=="genero_musical"? "(Obrigatório)" : "" ?></span>
+                </label>
+                <input type="text" class="form-control" value="<?= $usuario['genero_musical'] ?>" name="genero_musical" id="inputAddress2" placeholder="Genêro musical do músico">
+            </div>
 
-        <div class="form-group text-light">
-            <label for="inputAddress2">
-                Nome fantasia<span class="text-danger">*</span>
-                <span class="text-danger"><?= $vazio=="nome_fantasia"? "(Obrigatório)" : "" ?></span>
-            </label>
-            <input type="text" class="form-control" value="<?= $usuario['nome_fantasia'] ?>" name="nome_fantasia" id="inputAddress2" placeholder="Nome do cantor ou da banda">
-        </div>
+            <div class="form-group text-light">
+                <label for="inputAddress2">
+                    Cachê<span class="text-danger">*</span>
+                    <span class="text-danger"><?= $vazio=="cache_show"? "(Obrigatório)" : "" ?></span>
+                </label>
+                <input type="number" class="form-control" value="<?= $usuario['cache_show'] ?>" name="cache_show" id="inputAddress2" placeholder="Valor cobrado por show/evento participado">
+            </div>
 
-        <div class="form-group text-light">
-            <label for="inputAddress2">
-                Genêro músical<span class="text-danger">*</span>
-                <span class="text-danger"><?= $vazio=="genero_musical"? "(Obrigatório)" : "" ?></span>
-            </label>
-            <input type="text" class="form-control" value="<?= $usuario['genero_musical'] ?>" name="genero_musical" id="inputAddress2" placeholder="Genêro musical do músico">
-        </div>
+            <div id="buttons">
+                <button type="submit" class="btn btn-danger btn-sm">Alterar</button>
+                <a href="painelMusico.php"><button type="button" class="btn btn-danger btn-sm">Voltar</button></a>
+            </div>
 
-        <div class="form-group text-light">
-            <label for="inputAddress2">
-                Cachê<span class="text-danger">*</span>
-                <span class="text-danger"><?= $vazio=="cache_show"? "(Obrigatório)" : "" ?></span>
-            </label>
-            <input type="number" class="form-control" value="<?= $usuario['cache_show'] ?>" name="cache_show" id="inputAddress2" placeholder="Valor cobrado por show/evento participado">
-        </div>
-
-        <div id="buttons">
-            <button type="submit" class="btn btn-danger btn-lg">Alterar</button>
-            <a href="painelMusico.php"><button type="button" class="btn btn-danger btn-lg">Voltar</button></a>
-        </div>
-
-    </form>
+        </form>
+    </section>
 </body>
 </html>
